@@ -1,0 +1,1 @@
+Breaks down and understands Valve's Source script and then maps elements within that script to Windows Presentation Foundation (WPF) GUI elements with two way binding capable of outputting back into the source scripts themselves.

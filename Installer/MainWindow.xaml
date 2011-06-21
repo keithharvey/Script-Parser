@@ -1,0 +1,45 @@
+﻿<Window x:Class="Installer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+	xmlns:src="clr-namespace:Installer"
+	xmlns:properties="clr-namespace:Installer.Properties"
+	xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit"
+    Title="{Binding Path=TitleInfo, Mode=OneWay}"  WindowStyle="SingleBorderWindow" SizeToContent="WidthAndHeight" Width="auto">
+
+	<Window.Resources>
+		<ResourceDictionary Source="MainWindowResources.xaml" />
+	</Window.Resources>
+	
+	<DockPanel>
+		<Menu
+			DockPanel.Dock="Top" 
+			Height="24" Margin="0,0,0,0" Name="mainMenu" VerticalAlignment="Top">
+			<MenuItem Header="File"
+					  ItemsSource="{Binding Path=FileCommands}"
+					  ItemTemplate="{StaticResource MenuCommandsTemplate}"
+					  />
+			<MenuItem Header="Apply">
+				<MenuItem Header="Apply"/>
+			</MenuItem>
+			<MenuItem Header="Backup">
+				<MenuItem Header="Create" />
+				<MenuItem Header="Restore" />
+			</MenuItem>
+			<MenuItem Header="Settings">
+				<MenuItem.Resources>
+					<properties:Settings x:Key="Settings" />
+				</MenuItem.Resources>
+				<MenuItem Header="Restore last file between sessions" IsCheckable="true" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.RestoreFile, Mode=TwoWay}" />
+				<MenuItem Header="Automatically create backups" IsCheckable="true" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.AutoCreateBackups, Mode=TwoWay}" />
+				<MenuItem Header="Save on apply" IsCheckable="true" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.SaveOnApply, Mode=TwoWay}" />
+			</MenuItem>
+		</Menu>
+
+		<ContentControl
+			Content="{Binding Path=Configurations}"
+			ContentTemplate="{StaticResource WorkspacesTemplate}"
+			Width="auto"
+			/>
+		
+	</DockPanel>
+</Window>
