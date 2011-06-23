@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g 2011-06-20 21:41:00
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g 2011-06-23 01:54:01
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -179,7 +179,7 @@ public partial class SourceExprParser : Parser
             			case 1 :
             			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:36:7: guiRule
             			    {
-            			    	PushFollow(FOLLOW_guiRule_in_prog142);
+            			    	PushFollow(FOLLOW_guiRule_in_prog140);
             			    	guiRule1 = guiRule();
             			    	state.followingStackPointer--;
 
@@ -191,7 +191,7 @@ public partial class SourceExprParser : Parser
             			case 2 :
             			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:36:68: stat
             			    {
-            			    	PushFollow(FOLLOW_stat_in_prog148);
+            			    	PushFollow(FOLLOW_stat_in_prog146);
             			    	stat2 = stat();
             			    	state.followingStackPointer--;
 
@@ -203,7 +203,7 @@ public partial class SourceExprParser : Parser
             			case 3 :
             			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:36:123: LINEBREAK
             			    {
-            			    	LINEBREAK3=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_prog154); 
+            			    	LINEBREAK3=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_prog152); 
 
             			    }
             			    break;
@@ -382,23 +382,23 @@ public partial class SourceExprParser : Parser
                 case 1 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:39:8: ALIAS id '\"' multExpr '\"'
                     {
-                    	ALIAS4=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_stat170);  
+                    	ALIAS4=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_stat168);  
                     	stream_ALIAS.Add(ALIAS4);
 
-                    	PushFollow(FOLLOW_id_in_stat172);
+                    	PushFollow(FOLLOW_id_in_stat170);
                     	id5 = id();
                     	state.followingStackPointer--;
 
                     	stream_id.Add(id5.Tree);
-                    	char_literal6=(IToken)Match(input,21,FOLLOW_21_in_stat174);  
+                    	char_literal6=(IToken)Match(input,21,FOLLOW_21_in_stat172);  
                     	stream_21.Add(char_literal6);
 
-                    	PushFollow(FOLLOW_multExpr_in_stat176);
+                    	PushFollow(FOLLOW_multExpr_in_stat174);
                     	multExpr7 = multExpr();
                     	state.followingStackPointer--;
 
                     	stream_multExpr.Add(multExpr7.Tree);
-                    	char_literal8=(IToken)Match(input,21,FOLLOW_21_in_stat178);  
+                    	char_literal8=(IToken)Match(input,21,FOLLOW_21_in_stat176);  
                     	stream_21.Add(char_literal8);
 
 
@@ -435,15 +435,15 @@ public partial class SourceExprParser : Parser
                 case 2 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:40:4: ALIAS id command
                     {
-                    	ALIAS9=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_stat193);  
+                    	ALIAS9=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_stat191);  
                     	stream_ALIAS.Add(ALIAS9);
 
-                    	PushFollow(FOLLOW_id_in_stat195);
+                    	PushFollow(FOLLOW_id_in_stat193);
                     	id10 = id();
                     	state.followingStackPointer--;
 
                     	stream_id.Add(id10.Tree);
-                    	PushFollow(FOLLOW_command_in_stat197);
+                    	PushFollow(FOLLOW_command_in_stat195);
                     	command11 = command();
                     	state.followingStackPointer--;
 
@@ -451,7 +451,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          ALIAS, command, id
+                    	// elements:          id, command, ALIAS
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -482,10 +482,10 @@ public partial class SourceExprParser : Parser
                 case 3 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:41:4: ALIAS id ( emptyQuotes )?
                     {
-                    	ALIAS12=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_stat212);  
+                    	ALIAS12=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_stat210);  
                     	stream_ALIAS.Add(ALIAS12);
 
-                    	PushFollow(FOLLOW_id_in_stat214);
+                    	PushFollow(FOLLOW_id_in_stat212);
                     	id13 = id();
                     	state.followingStackPointer--;
 
@@ -503,7 +503,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:41:13: emptyQuotes
                     	        {
-                    	        	PushFollow(FOLLOW_emptyQuotes_in_stat216);
+                    	        	PushFollow(FOLLOW_emptyQuotes_in_stat214);
                     	        	emptyQuotes14 = emptyQuotes();
                     	        	state.followingStackPointer--;
 
@@ -547,29 +547,29 @@ public partial class SourceExprParser : Parser
                 case 4 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:42:4: BIND id '\"' multExpr '\"'
                     {
-                    	BIND15=(IToken)Match(input,BIND,FOLLOW_BIND_in_stat230);  
+                    	BIND15=(IToken)Match(input,BIND,FOLLOW_BIND_in_stat228);  
                     	stream_BIND.Add(BIND15);
 
-                    	PushFollow(FOLLOW_id_in_stat232);
+                    	PushFollow(FOLLOW_id_in_stat230);
                     	id16 = id();
                     	state.followingStackPointer--;
 
                     	stream_id.Add(id16.Tree);
-                    	char_literal17=(IToken)Match(input,21,FOLLOW_21_in_stat234);  
+                    	char_literal17=(IToken)Match(input,21,FOLLOW_21_in_stat232);  
                     	stream_21.Add(char_literal17);
 
-                    	PushFollow(FOLLOW_multExpr_in_stat236);
+                    	PushFollow(FOLLOW_multExpr_in_stat234);
                     	multExpr18 = multExpr();
                     	state.followingStackPointer--;
 
                     	stream_multExpr.Add(multExpr18.Tree);
-                    	char_literal19=(IToken)Match(input,21,FOLLOW_21_in_stat238);  
+                    	char_literal19=(IToken)Match(input,21,FOLLOW_21_in_stat236);  
                     	stream_21.Add(char_literal19);
 
 
 
                     	// AST REWRITE
-                    	// elements:          id, BIND, multExpr
+                    	// elements:          BIND, id, multExpr
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -600,15 +600,15 @@ public partial class SourceExprParser : Parser
                 case 5 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:43:4: BIND id command
                     {
-                    	BIND20=(IToken)Match(input,BIND,FOLLOW_BIND_in_stat254);  
+                    	BIND20=(IToken)Match(input,BIND,FOLLOW_BIND_in_stat252);  
                     	stream_BIND.Add(BIND20);
 
-                    	PushFollow(FOLLOW_id_in_stat256);
+                    	PushFollow(FOLLOW_id_in_stat254);
                     	id21 = id();
                     	state.followingStackPointer--;
 
                     	stream_id.Add(id21.Tree);
-                    	PushFollow(FOLLOW_command_in_stat258);
+                    	PushFollow(FOLLOW_command_in_stat256);
                     	command22 = command();
                     	state.followingStackPointer--;
 
@@ -616,7 +616,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          command, BIND, id
+                    	// elements:          id, command, BIND
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -647,10 +647,10 @@ public partial class SourceExprParser : Parser
                 case 6 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:44:4: BIND id ( emptyQuotes )?
                     {
-                    	BIND23=(IToken)Match(input,BIND,FOLLOW_BIND_in_stat273);  
+                    	BIND23=(IToken)Match(input,BIND,FOLLOW_BIND_in_stat271);  
                     	stream_BIND.Add(BIND23);
 
-                    	PushFollow(FOLLOW_id_in_stat275);
+                    	PushFollow(FOLLOW_id_in_stat273);
                     	id24 = id();
                     	state.followingStackPointer--;
 
@@ -668,7 +668,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:44:12: emptyQuotes
                     	        {
-                    	        	PushFollow(FOLLOW_emptyQuotes_in_stat277);
+                    	        	PushFollow(FOLLOW_emptyQuotes_in_stat275);
                     	        	emptyQuotes25 = emptyQuotes();
                     	        	state.followingStackPointer--;
 
@@ -725,7 +725,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:45:4: RCON
                     	        {
-                    	        	RCON26=(IToken)Match(input,RCON,FOLLOW_RCON_in_stat291);  
+                    	        	RCON26=(IToken)Match(input,RCON,FOLLOW_RCON_in_stat289);  
                     	        	stream_RCON.Add(RCON26);
 
 
@@ -734,16 +734,16 @@ public partial class SourceExprParser : Parser
 
                     	}
 
-                    	EXEC27=(IToken)Match(input,EXEC,FOLLOW_EXEC_in_stat294);  
+                    	EXEC27=(IToken)Match(input,EXEC,FOLLOW_EXEC_in_stat292);  
                     	stream_EXEC.Add(EXEC27);
 
-                    	char_literal28=(IToken)Match(input,21,FOLLOW_21_in_stat296);  
+                    	char_literal28=(IToken)Match(input,21,FOLLOW_21_in_stat294);  
                     	stream_21.Add(char_literal28);
 
-                    	ID29=(IToken)Match(input,ID,FOLLOW_ID_in_stat298);  
+                    	ID29=(IToken)Match(input,ID,FOLLOW_ID_in_stat296);  
                     	stream_ID.Add(ID29);
 
-                    	char_literal30=(IToken)Match(input,21,FOLLOW_21_in_stat300);  
+                    	char_literal30=(IToken)Match(input,21,FOLLOW_21_in_stat298);  
                     	stream_21.Add(char_literal30);
 
 
@@ -799,7 +799,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:46:4: RCON
                     	        {
-                    	        	RCON31=(IToken)Match(input,RCON,FOLLOW_RCON_in_stat316);  
+                    	        	RCON31=(IToken)Match(input,RCON,FOLLOW_RCON_in_stat314);  
                     	        	stream_RCON.Add(RCON31);
 
 
@@ -808,16 +808,16 @@ public partial class SourceExprParser : Parser
 
                     	}
 
-                    	EXEC32=(IToken)Match(input,EXEC,FOLLOW_EXEC_in_stat319);  
+                    	EXEC32=(IToken)Match(input,EXEC,FOLLOW_EXEC_in_stat317);  
                     	stream_EXEC.Add(EXEC32);
 
-                    	ID33=(IToken)Match(input,ID,FOLLOW_ID_in_stat321);  
+                    	ID33=(IToken)Match(input,ID,FOLLOW_ID_in_stat319);  
                     	stream_ID.Add(ID33);
 
 
 
                     	// AST REWRITE
-                    	// elements:          EXEC, RCON, ID
+                    	// elements:          ID, EXEC, RCON
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -856,7 +856,7 @@ public partial class SourceExprParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
 
-                    	PushFollow(FOLLOW_command_in_stat337);
+                    	PushFollow(FOLLOW_command_in_stat335);
                     	command34 = command();
                     	state.followingStackPointer--;
 
@@ -867,25 +867,25 @@ public partial class SourceExprParser : Parser
                 case 10 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:48:4: INCREMENT id id id id
                     {
-                    	INCREMENT35=(IToken)Match(input,INCREMENT,FOLLOW_INCREMENT_in_stat342);  
+                    	INCREMENT35=(IToken)Match(input,INCREMENT,FOLLOW_INCREMENT_in_stat340);  
                     	stream_INCREMENT.Add(INCREMENT35);
 
-                    	PushFollow(FOLLOW_id_in_stat344);
+                    	PushFollow(FOLLOW_id_in_stat342);
                     	id36 = id();
                     	state.followingStackPointer--;
 
                     	stream_id.Add(id36.Tree);
-                    	PushFollow(FOLLOW_id_in_stat346);
+                    	PushFollow(FOLLOW_id_in_stat344);
                     	id37 = id();
                     	state.followingStackPointer--;
 
                     	stream_id.Add(id37.Tree);
-                    	PushFollow(FOLLOW_id_in_stat348);
+                    	PushFollow(FOLLOW_id_in_stat346);
                     	id38 = id();
                     	state.followingStackPointer--;
 
                     	stream_id.Add(id38.Tree);
-                    	PushFollow(FOLLOW_id_in_stat350);
+                    	PushFollow(FOLLOW_id_in_stat348);
                     	id39 = id();
                     	state.followingStackPointer--;
 
@@ -893,7 +893,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          id, id, id, INCREMENT, id
+                    	// elements:          id, id, INCREMENT, id, id
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -926,10 +926,10 @@ public partial class SourceExprParser : Parser
                 case 11 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:49:4: ECHO '\"' ( ID )* '\"'
                     {
-                    	ECHO40=(IToken)Match(input,ECHO,FOLLOW_ECHO_in_stat369);  
+                    	ECHO40=(IToken)Match(input,ECHO,FOLLOW_ECHO_in_stat367);  
                     	stream_ECHO.Add(ECHO40);
 
-                    	char_literal41=(IToken)Match(input,21,FOLLOW_21_in_stat371);  
+                    	char_literal41=(IToken)Match(input,21,FOLLOW_21_in_stat369);  
                     	stream_21.Add(char_literal41);
 
                     	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:49:13: ( ID )*
@@ -949,7 +949,7 @@ public partial class SourceExprParser : Parser
                     			case 1 :
                     			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:49:13: ID
                     			    {
-                    			    	ID42=(IToken)Match(input,ID,FOLLOW_ID_in_stat373);  
+                    			    	ID42=(IToken)Match(input,ID,FOLLOW_ID_in_stat371);  
                     			    	stream_ID.Add(ID42);
 
 
@@ -964,7 +964,7 @@ public partial class SourceExprParser : Parser
                     	loop6:
                     		;	// Stops C# compiler whining that label 'loop6' has no statements
 
-                    	char_literal43=(IToken)Match(input,21,FOLLOW_21_in_stat376);  
+                    	char_literal43=(IToken)Match(input,21,FOLLOW_21_in_stat374);  
                     	stream_21.Add(char_literal43);
 
 
@@ -992,10 +992,10 @@ public partial class SourceExprParser : Parser
                 case 12 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:50:4: ECHO ID
                     {
-                    	ECHO44=(IToken)Match(input,ECHO,FOLLOW_ECHO_in_stat385);  
+                    	ECHO44=(IToken)Match(input,ECHO,FOLLOW_ECHO_in_stat383);  
                     	stream_ECHO.Add(ECHO44);
 
-                    	ID45=(IToken)Match(input,ID,FOLLOW_ID_in_stat387);  
+                    	ID45=(IToken)Match(input,ID,FOLLOW_ID_in_stat385);  
                     	stream_ID.Add(ID45);
 
 
@@ -1023,10 +1023,10 @@ public partial class SourceExprParser : Parser
                 case 13 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:51:4: SAY '\"' ( ID )* '\"'
                     {
-                    	SAY46=(IToken)Match(input,SAY,FOLLOW_SAY_in_stat396);  
+                    	SAY46=(IToken)Match(input,SAY,FOLLOW_SAY_in_stat394);  
                     	stream_SAY.Add(SAY46);
 
-                    	char_literal47=(IToken)Match(input,21,FOLLOW_21_in_stat398);  
+                    	char_literal47=(IToken)Match(input,21,FOLLOW_21_in_stat396);  
                     	stream_21.Add(char_literal47);
 
                     	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:51:12: ( ID )*
@@ -1046,7 +1046,7 @@ public partial class SourceExprParser : Parser
                     			case 1 :
                     			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:51:12: ID
                     			    {
-                    			    	ID48=(IToken)Match(input,ID,FOLLOW_ID_in_stat400);  
+                    			    	ID48=(IToken)Match(input,ID,FOLLOW_ID_in_stat398);  
                     			    	stream_ID.Add(ID48);
 
 
@@ -1061,7 +1061,7 @@ public partial class SourceExprParser : Parser
                     	loop7:
                     		;	// Stops C# compiler whining that label 'loop7' has no statements
 
-                    	char_literal49=(IToken)Match(input,21,FOLLOW_21_in_stat403);  
+                    	char_literal49=(IToken)Match(input,21,FOLLOW_21_in_stat401);  
                     	stream_21.Add(char_literal49);
 
 
@@ -1089,10 +1089,10 @@ public partial class SourceExprParser : Parser
                 case 14 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:52:4: SAY ID
                     {
-                    	SAY50=(IToken)Match(input,SAY,FOLLOW_SAY_in_stat412);  
+                    	SAY50=(IToken)Match(input,SAY,FOLLOW_SAY_in_stat410);  
                     	stream_SAY.Add(SAY50);
 
-                    	ID51=(IToken)Match(input,ID,FOLLOW_ID_in_stat414);  
+                    	ID51=(IToken)Match(input,ID,FOLLOW_ID_in_stat412);  
                     	stream_ID.Add(ID51);
 
 
@@ -1173,7 +1173,7 @@ public partial class SourceExprParser : Parser
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	PushFollow(FOLLOW_innerStat_in_multExpr428);
+            	PushFollow(FOLLOW_innerStat_in_multExpr426);
             	innerStat52 = innerStat();
             	state.followingStackPointer--;
 
@@ -1196,8 +1196,8 @@ public partial class SourceExprParser : Parser
             			case 1 :
             			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:55:15: LINEBREAK innerStat
             			    {
-            			    	LINEBREAK53=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_multExpr431); 
-            			    	PushFollow(FOLLOW_innerStat_in_multExpr434);
+            			    	LINEBREAK53=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_multExpr429); 
+            			    	PushFollow(FOLLOW_innerStat_in_multExpr432);
             			    	innerStat54 = innerStat();
             			    	state.followingStackPointer--;
 
@@ -1382,10 +1382,10 @@ public partial class SourceExprParser : Parser
                 case 1 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:58:4: ALIAS ID ( innerCommand )?
                     {
-                    	ALIAS55=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_innerStat446);  
+                    	ALIAS55=(IToken)Match(input,ALIAS,FOLLOW_ALIAS_in_innerStat444);  
                     	stream_ALIAS.Add(ALIAS55);
 
-                    	ID56=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat448);  
+                    	ID56=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat446);  
                     	stream_ID.Add(ID56);
 
                     	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:58:13: ( innerCommand )?
@@ -1401,7 +1401,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:58:13: innerCommand
                     	        {
-                    	        	PushFollow(FOLLOW_innerCommand_in_innerStat450);
+                    	        	PushFollow(FOLLOW_innerCommand_in_innerStat448);
                     	        	innerCommand57 = innerCommand();
                     	        	state.followingStackPointer--;
 
@@ -1415,7 +1415,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          ALIAS, ID, innerCommand
+                    	// elements:          innerCommand, ID, ALIAS
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1452,10 +1452,10 @@ public partial class SourceExprParser : Parser
                 case 2 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:59:4: BIND ID ( innerCommand )?
                     {
-                    	BIND58=(IToken)Match(input,BIND,FOLLOW_BIND_in_innerStat467);  
+                    	BIND58=(IToken)Match(input,BIND,FOLLOW_BIND_in_innerStat465);  
                     	stream_BIND.Add(BIND58);
 
-                    	ID59=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat469);  
+                    	ID59=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat467);  
                     	stream_ID.Add(ID59);
 
                     	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:59:12: ( innerCommand )?
@@ -1471,7 +1471,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:59:12: innerCommand
                     	        {
-                    	        	PushFollow(FOLLOW_innerCommand_in_innerStat471);
+                    	        	PushFollow(FOLLOW_innerCommand_in_innerStat469);
                     	        	innerCommand60 = innerCommand();
                     	        	state.followingStackPointer--;
 
@@ -1485,7 +1485,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          BIND, ID, ID
+                    	// elements:          ID, ID, BIND
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1524,7 +1524,7 @@ public partial class SourceExprParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
 
-                    	PushFollow(FOLLOW_innerCommand_in_innerStat488);
+                    	PushFollow(FOLLOW_innerCommand_in_innerStat486);
                     	innerCommand61 = innerCommand();
                     	state.followingStackPointer--;
 
@@ -1535,25 +1535,25 @@ public partial class SourceExprParser : Parser
                 case 4 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:61:4: INCREMENT ID ID ID ID
                     {
-                    	INCREMENT62=(IToken)Match(input,INCREMENT,FOLLOW_INCREMENT_in_innerStat493);  
+                    	INCREMENT62=(IToken)Match(input,INCREMENT,FOLLOW_INCREMENT_in_innerStat491);  
                     	stream_INCREMENT.Add(INCREMENT62);
 
-                    	ID63=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat495);  
+                    	ID63=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat493);  
                     	stream_ID.Add(ID63);
 
-                    	ID64=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat497);  
+                    	ID64=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat495);  
                     	stream_ID.Add(ID64);
 
-                    	ID65=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat499);  
+                    	ID65=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat497);  
                     	stream_ID.Add(ID65);
 
-                    	ID66=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat501);  
+                    	ID66=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat499);  
                     	stream_ID.Add(ID66);
 
 
 
                     	// AST REWRITE
-                    	// elements:          ID, INCREMENT, ID, ID, ID
+                    	// elements:          INCREMENT, ID, ID, ID, ID
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1599,7 +1599,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:62:4: RCON
                     	        {
-                    	        	RCON67=(IToken)Match(input,RCON,FOLLOW_RCON_in_innerStat520);  
+                    	        	RCON67=(IToken)Match(input,RCON,FOLLOW_RCON_in_innerStat518);  
                     	        	stream_RCON.Add(RCON67);
 
 
@@ -1608,16 +1608,16 @@ public partial class SourceExprParser : Parser
 
                     	}
 
-                    	EXEC68=(IToken)Match(input,EXEC,FOLLOW_EXEC_in_innerStat523);  
+                    	EXEC68=(IToken)Match(input,EXEC,FOLLOW_EXEC_in_innerStat521);  
                     	stream_EXEC.Add(EXEC68);
 
-                    	ID69=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat525);  
+                    	ID69=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat523);  
                     	stream_ID.Add(ID69);
 
 
 
                     	// AST REWRITE
-                    	// elements:          ID, EXEC
+                    	// elements:          EXEC, ID
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1647,7 +1647,7 @@ public partial class SourceExprParser : Parser
                 case 6 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:63:4: ECHO ( ID )*
                     {
-                    	ECHO70=(IToken)Match(input,ECHO,FOLLOW_ECHO_in_innerStat538);  
+                    	ECHO70=(IToken)Match(input,ECHO,FOLLOW_ECHO_in_innerStat536);  
                     	stream_ECHO.Add(ECHO70);
 
                     	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:63:9: ( ID )*
@@ -1667,7 +1667,7 @@ public partial class SourceExprParser : Parser
                     			case 1 :
                     			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:63:9: ID
                     			    {
-                    			    	ID71=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat540);  
+                    			    	ID71=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat538);  
                     			    	stream_ID.Add(ID71);
 
 
@@ -1707,7 +1707,7 @@ public partial class SourceExprParser : Parser
                 case 7 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:64:4: SAY ( ID )*
                     {
-                    	SAY72=(IToken)Match(input,SAY,FOLLOW_SAY_in_innerStat550);  
+                    	SAY72=(IToken)Match(input,SAY,FOLLOW_SAY_in_innerStat548);  
                     	stream_SAY.Add(SAY72);
 
                     	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:64:8: ( ID )*
@@ -1727,7 +1727,7 @@ public partial class SourceExprParser : Parser
                     			case 1 :
                     			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:64:8: ID
                     			    {
-                    			    	ID73=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat552);  
+                    			    	ID73=(IToken)Match(input,ID,FOLLOW_ID_in_innerStat550);  
                     			    	stream_ID.Add(ID73);
 
 
@@ -1845,7 +1845,7 @@ public partial class SourceExprParser : Parser
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
 
-                    	ID74=(IToken)Match(input,ID,FOLLOW_ID_in_id568); 
+                    	ID74=(IToken)Match(input,ID,FOLLOW_ID_in_id566); 
                     		ID74_tree = (CommonTree)adaptor.Create(ID74);
                     		adaptor.AddChild(root_0, ID74_tree);
 
@@ -1855,13 +1855,13 @@ public partial class SourceExprParser : Parser
                 case 2 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:68:4: '\"' ID '\"'
                     {
-                    	char_literal75=(IToken)Match(input,21,FOLLOW_21_in_id573);  
+                    	char_literal75=(IToken)Match(input,21,FOLLOW_21_in_id571);  
                     	stream_21.Add(char_literal75);
 
-                    	ID76=(IToken)Match(input,ID,FOLLOW_ID_in_id575);  
+                    	ID76=(IToken)Match(input,ID,FOLLOW_ID_in_id573);  
                     	stream_ID.Add(ID76);
 
-                    	char_literal77=(IToken)Match(input,21,FOLLOW_21_in_id577);  
+                    	char_literal77=(IToken)Match(input,21,FOLLOW_21_in_id575);  
                     	stream_21.Add(char_literal77);
 
 
@@ -2024,7 +2024,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:71:11: RCON
                     	        {
-                    	        	RCON78=(IToken)Match(input,RCON,FOLLOW_RCON_in_command591);  
+                    	        	RCON78=(IToken)Match(input,RCON,FOLLOW_RCON_in_command589);  
                     	        	stream_RCON.Add(RCON78);
 
 
@@ -2033,7 +2033,7 @@ public partial class SourceExprParser : Parser
 
                     	}
 
-                    	ID79=(IToken)Match(input,ID,FOLLOW_ID_in_command594);  
+                    	ID79=(IToken)Match(input,ID,FOLLOW_ID_in_command592);  
                     	stream_ID.Add(ID79);
 
 
@@ -2089,7 +2089,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:72:4: RCON
                     	        {
-                    	        	RCON80=(IToken)Match(input,RCON,FOLLOW_RCON_in_command611);  
+                    	        	RCON80=(IToken)Match(input,RCON,FOLLOW_RCON_in_command609);  
                     	        	stream_RCON.Add(RCON80);
 
 
@@ -2098,10 +2098,10 @@ public partial class SourceExprParser : Parser
 
                     	}
 
-                    	ID81=(IToken)Match(input,ID,FOLLOW_ID_in_command614);  
+                    	ID81=(IToken)Match(input,ID,FOLLOW_ID_in_command612);  
                     	stream_ID.Add(ID81);
 
-                    	PushFollow(FOLLOW_id_in_command616);
+                    	PushFollow(FOLLOW_id_in_command614);
                     	id82 = id();
                     	state.followingStackPointer--;
 
@@ -2109,7 +2109,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          RCON, ID, id
+                    	// elements:          ID, id, RCON
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -2282,7 +2282,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:75:4: RCON
                     	        {
-                    	        	RCON83=(IToken)Match(input,RCON,FOLLOW_RCON_in_innerCommand641);  
+                    	        	RCON83=(IToken)Match(input,RCON,FOLLOW_RCON_in_innerCommand639);  
                     	        	stream_RCON.Add(RCON83);
 
 
@@ -2291,13 +2291,13 @@ public partial class SourceExprParser : Parser
 
                     	}
 
-                    	ID84=(IToken)Match(input,ID,FOLLOW_ID_in_innerCommand644);  
+                    	ID84=(IToken)Match(input,ID,FOLLOW_ID_in_innerCommand642);  
                     	stream_ID.Add(ID84);
 
 
 
                     	// AST REWRITE
-                    	// elements:          ID, RCON
+                    	// elements:          RCON, ID
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -2347,7 +2347,7 @@ public partial class SourceExprParser : Parser
                     	    case 1 :
                     	        // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:76:4: RCON
                     	        {
-                    	        	RCON85=(IToken)Match(input,RCON,FOLLOW_RCON_in_innerCommand661);  
+                    	        	RCON85=(IToken)Match(input,RCON,FOLLOW_RCON_in_innerCommand659);  
                     	        	stream_RCON.Add(RCON85);
 
 
@@ -2356,10 +2356,10 @@ public partial class SourceExprParser : Parser
 
                     	}
 
-                    	ID86=(IToken)Match(input,ID,FOLLOW_ID_in_innerCommand664);  
+                    	ID86=(IToken)Match(input,ID,FOLLOW_ID_in_innerCommand662);  
                     	stream_ID.Add(ID86);
 
-                    	ID87=(IToken)Match(input,ID,FOLLOW_ID_in_innerCommand666);  
+                    	ID87=(IToken)Match(input,ID,FOLLOW_ID_in_innerCommand664);  
                     	stream_ID.Add(ID87);
 
 
@@ -2422,6 +2422,12 @@ public partial class SourceExprParser : Parser
     }
     // $ANTLR end "innerCommand"
 
+    protected class guiRule_scope 
+    {
+        protected internal string metaType;
+    }
+    protected Stack guiRule_stack = new Stack();
+
     public class guiRule_return : ParserRuleReturnScope
     {
         private CommonTree tree;
@@ -2433,81 +2439,48 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "guiRule"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:78:1: guiRule : META guiFields ( LINEBREAK )* stat -> ^( META guiFields stat ) ;
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:78:1: guiRule : META firstGuiField metaEnding -> ^( META firstGuiField metaEnding ) ;
     public SourceExprParser.guiRule_return guiRule() // throws RecognitionException [1]
     {   
+        guiRule_stack.Push(new guiRule_scope());
         SourceExprParser.guiRule_return retval = new SourceExprParser.guiRule_return();
         retval.Start = input.LT(1);
 
         CommonTree root_0 = null;
 
         IToken META88 = null;
-        IToken LINEBREAK90 = null;
-        SourceExprParser.guiFields_return guiFields89 = default(SourceExprParser.guiFields_return);
+        SourceExprParser.firstGuiField_return firstGuiField89 = default(SourceExprParser.firstGuiField_return);
 
-        SourceExprParser.stat_return stat91 = default(SourceExprParser.stat_return);
+        SourceExprParser.metaEnding_return metaEnding90 = default(SourceExprParser.metaEnding_return);
 
 
         CommonTree META88_tree=null;
-        CommonTree LINEBREAK90_tree=null;
         RewriteRuleTokenStream stream_META = new RewriteRuleTokenStream(adaptor,"token META");
-        RewriteRuleTokenStream stream_LINEBREAK = new RewriteRuleTokenStream(adaptor,"token LINEBREAK");
-        RewriteRuleSubtreeStream stream_guiFields = new RewriteRuleSubtreeStream(adaptor,"rule guiFields");
-        RewriteRuleSubtreeStream stream_stat = new RewriteRuleSubtreeStream(adaptor,"rule stat");
+        RewriteRuleSubtreeStream stream_metaEnding = new RewriteRuleSubtreeStream(adaptor,"rule metaEnding");
+        RewriteRuleSubtreeStream stream_firstGuiField = new RewriteRuleSubtreeStream(adaptor,"rule firstGuiField");
+         ((guiRule_scope)guiRule_stack.Peek()).metaType =  String.Empty; 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:79:2: ( META guiFields ( LINEBREAK )* stat -> ^( META guiFields stat ) )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:79:4: META guiFields ( LINEBREAK )* stat
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:81:2: ( META firstGuiField metaEnding -> ^( META firstGuiField metaEnding ) )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:81:4: META firstGuiField metaEnding
             {
-            	META88=(IToken)Match(input,META,FOLLOW_META_in_guiRule690);  
+            	META88=(IToken)Match(input,META,FOLLOW_META_in_guiRule697);  
             	stream_META.Add(META88);
 
-            	PushFollow(FOLLOW_guiFields_in_guiRule692);
-            	guiFields89 = guiFields();
+            	PushFollow(FOLLOW_firstGuiField_in_guiRule699);
+            	firstGuiField89 = firstGuiField();
             	state.followingStackPointer--;
 
-            	stream_guiFields.Add(guiFields89.Tree);
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:79:19: ( LINEBREAK )*
-            	do 
-            	{
-            	    int alt23 = 2;
-            	    int LA23_0 = input.LA(1);
-
-            	    if ( (LA23_0 == LINEBREAK) )
-            	    {
-            	        alt23 = 1;
-            	    }
-
-
-            	    switch (alt23) 
-            		{
-            			case 1 :
-            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:79:19: LINEBREAK
-            			    {
-            			    	LINEBREAK90=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_guiRule694);  
-            			    	stream_LINEBREAK.Add(LINEBREAK90);
-
-
-            			    }
-            			    break;
-
-            			default:
-            			    goto loop23;
-            	    }
-            	} while (true);
-
-            	loop23:
-            		;	// Stops C# compiler whining that label 'loop23' has no statements
-
-            	PushFollow(FOLLOW_stat_in_guiRule697);
-            	stat91 = stat();
+            	stream_firstGuiField.Add(firstGuiField89.Tree);
+            	PushFollow(FOLLOW_metaEnding_in_guiRule701);
+            	metaEnding90 = metaEnding();
             	state.followingStackPointer--;
 
-            	stream_stat.Add(stat91.Tree);
+            	stream_metaEnding.Add(metaEnding90.Tree);
 
 
             	// AST REWRITE
-            	// elements:          META, guiFields, stat
+            	// elements:          metaEnding, firstGuiField, META
             	// token labels:      
             	// rule labels:       retval
             	// token list labels: 
@@ -2517,15 +2490,15 @@ public partial class SourceExprParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
 
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 80:3: -> ^( META guiFields stat )
+            	// 82:3: -> ^( META firstGuiField metaEnding )
             	{
-            	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:80:7: ^( META guiFields stat )
+            	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:82:7: ^( META firstGuiField metaEnding )
             	    {
             	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
             	    root_1 = (CommonTree)adaptor.BecomeRoot(stream_META.NextNode(), root_1);
 
-            	    adaptor.AddChild(root_1, stream_guiFields.NextTree());
-            	    adaptor.AddChild(root_1, stream_stat.NextTree());
+            	    adaptor.AddChild(root_1, stream_firstGuiField.NextTree());
+            	    adaptor.AddChild(root_1, stream_metaEnding.NextTree());
 
             	    adaptor.AddChild(root_0, root_1);
             	    }
@@ -2550,16 +2523,237 @@ public partial class SourceExprParser : Parser
         }
         finally 
     	{
+            guiRule_stack.Pop();
         }
         return retval;
     }
     // $ANTLR end "guiRule"
 
+    public class firstGuiField_return : ParserRuleReturnScope
+    {
+        private CommonTree tree;
+        override public object Tree
+        {
+        	get { return tree; }
+        	set { tree = (CommonTree) value; }
+        }
+    };
+
+    // $ANTLR start "firstGuiField"
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:85:1: firstGuiField : '\"' id1= ID '\"' {...}? -> ID ;
+    public SourceExprParser.firstGuiField_return firstGuiField() // throws RecognitionException [1]
+    {   
+        SourceExprParser.firstGuiField_return retval = new SourceExprParser.firstGuiField_return();
+        retval.Start = input.LT(1);
+
+        CommonTree root_0 = null;
+
+        IToken id1 = null;
+        IToken char_literal91 = null;
+        IToken char_literal92 = null;
+
+        CommonTree id1_tree=null;
+        CommonTree char_literal91_tree=null;
+        CommonTree char_literal92_tree=null;
+        RewriteRuleTokenStream stream_21 = new RewriteRuleTokenStream(adaptor,"token 21");
+        RewriteRuleTokenStream stream_ID = new RewriteRuleTokenStream(adaptor,"token ID");
+
+        try 
+    	{
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:86:2: ( '\"' id1= ID '\"' {...}? -> ID )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:86:4: '\"' id1= ID '\"' {...}?
+            {
+            	char_literal91=(IToken)Match(input,21,FOLLOW_21_in_firstGuiField725);  
+            	stream_21.Add(char_literal91);
+
+            	id1=(IToken)Match(input,ID,FOLLOW_ID_in_firstGuiField729);  
+            	stream_ID.Add(id1);
+
+            	char_literal92=(IToken)Match(input,21,FOLLOW_21_in_firstGuiField731);  
+            	stream_21.Add(char_literal92);
+
+            	 ((guiRule_scope)guiRule_stack.Peek()).metaType = ((id1 != null) ? id1.Text : null); Debug.WriteLine("Reached end of firstGuiField");
+            	if ( !((_script.SupportedMetaData[((id1 != null) ? id1.Text : null)].IsAValidField(0, ((id1 != null) ? id1.Text : null), true) )) ) 
+            	{
+            	    throw new FailedPredicateException(input, "firstGuiField", "_script.SupportedMetaData[$id1.text].IsAValidField(0, $id1.text, true) ");
+            	}
+
+
+            	// AST REWRITE
+            	// elements:          ID
+            	// token labels:      
+            	// rule labels:       retval
+            	// token list labels: 
+            	// rule list labels:  
+            	// wildcard labels: 
+            	retval.Tree = root_0;
+            	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
+
+            	root_0 = (CommonTree)adaptor.GetNilNode();
+            	// 88:5: -> ID
+            	{
+            	    adaptor.AddChild(root_0, stream_ID.NextNode());
+
+            	}
+
+            	retval.Tree = root_0;retval.Tree = root_0;
+            }
+
+            retval.Stop = input.LT(-1);
+
+            	retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+            	adaptor.SetTokenBoundaries(retval.Tree, (IToken) retval.Start, (IToken) retval.Stop);
+        }
+        catch (RecognitionException re) 
+    	{
+            ReportError(re);
+            Recover(input,re);
+    	// Conversion of the second argument necessary, but harmless
+    	retval.Tree = (CommonTree)adaptor.ErrorNode(input, (IToken) retval.Start, input.LT(-1), re);
+
+        }
+        finally 
+    	{
+        }
+        return retval;
+    }
+    // $ANTLR end "firstGuiField"
+
+    public class metaEnding_return : ParserRuleReturnScope
+    {
+        private CommonTree tree;
+        override public object Tree
+        {
+        	get { return tree; }
+        	set { tree = (CommonTree) value; }
+        }
+    };
+
+    // $ANTLR start "metaEnding"
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:91:1: metaEnding : ({...}? => guiFields | {...}? => guiFields ( LINEBREAK )* stat );
+    public SourceExprParser.metaEnding_return metaEnding() // throws RecognitionException [1]
+    {   
+        SourceExprParser.metaEnding_return retval = new SourceExprParser.metaEnding_return();
+        retval.Start = input.LT(1);
+
+        CommonTree root_0 = null;
+
+        IToken LINEBREAK95 = null;
+        SourceExprParser.guiFields_return guiFields93 = default(SourceExprParser.guiFields_return);
+
+        SourceExprParser.guiFields_return guiFields94 = default(SourceExprParser.guiFields_return);
+
+        SourceExprParser.stat_return stat96 = default(SourceExprParser.stat_return);
+
+
+        CommonTree LINEBREAK95_tree=null;
+
+        try 
+    	{
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:92:2: ({...}? => guiFields | {...}? => guiFields ( LINEBREAK )* stat )
+            int alt24 = 2;
+            alt24 = dfa24.Predict(input);
+            switch (alt24) 
+            {
+                case 1 :
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:92:4: {...}? => guiFields
+                    {
+                    	root_0 = (CommonTree)adaptor.GetNilNode();
+
+                    	if ( !(((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) 
+                    	{
+                    	    throw new FailedPredicateException(input, "metaEnding", "(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true)");
+                    	}
+                    	Debug.WriteLine("meta ending reached, independent");
+                    	PushFollow(FOLLOW_guiFields_in_metaEnding760);
+                    	guiFields93 = guiFields();
+                    	state.followingStackPointer--;
+
+                    	adaptor.AddChild(root_0, guiFields93.Tree);
+
+                    }
+                    break;
+                case 2 :
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:4: {...}? => guiFields ( LINEBREAK )* stat
+                    {
+                    	root_0 = (CommonTree)adaptor.GetNilNode();
+
+                    	if ( !(((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) 
+                    	{
+                    	    throw new FailedPredicateException(input, "metaEnding", "(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false)");
+                    	}
+                    	Debug.WriteLine("meta ending reached, dependent");
+                    	PushFollow(FOLLOW_guiFields_in_metaEnding768);
+                    	guiFields94 = guiFields();
+                    	state.followingStackPointer--;
+
+                    	adaptor.AddChild(root_0, guiFields94.Tree);
+                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:141: ( LINEBREAK )*
+                    	do 
+                    	{
+                    	    int alt23 = 2;
+                    	    int LA23_0 = input.LA(1);
+
+                    	    if ( (LA23_0 == LINEBREAK) )
+                    	    {
+                    	        alt23 = 1;
+                    	    }
+
+
+                    	    switch (alt23) 
+                    		{
+                    			case 1 :
+                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:141: LINEBREAK
+                    			    {
+                    			    	LINEBREAK95=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_metaEnding770); 
+                    			    		LINEBREAK95_tree = (CommonTree)adaptor.Create(LINEBREAK95);
+                    			    		adaptor.AddChild(root_0, LINEBREAK95_tree);
+
+
+                    			    }
+                    			    break;
+
+                    			default:
+                    			    goto loop23;
+                    	    }
+                    	} while (true);
+
+                    	loop23:
+                    		;	// Stops C# compiler whining that label 'loop23' has no statements
+
+                    	PushFollow(FOLLOW_stat_in_metaEnding773);
+                    	stat96 = stat();
+                    	state.followingStackPointer--;
+
+                    	adaptor.AddChild(root_0, stat96.Tree);
+
+                    }
+                    break;
+
+            }
+            retval.Stop = input.LT(-1);
+
+            	retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+            	adaptor.SetTokenBoundaries(retval.Tree, (IToken) retval.Start, (IToken) retval.Stop);
+        }
+        catch (RecognitionException re) 
+    	{
+            ReportError(re);
+            Recover(input,re);
+    	// Conversion of the second argument necessary, but harmless
+    	retval.Tree = (CommonTree)adaptor.ErrorNode(input, (IToken) retval.Start, input.LT(-1), re);
+
+        }
+        finally 
+    	{
+        }
+        return retval;
+    }
+    // $ANTLR end "metaEnding"
+
     protected class guiFields_scope 
     {
-        protected internal bool first;
         protected internal int n;
-        protected internal string metaType;
     }
     protected Stack guiFields_stack = new Stack();
 
@@ -2574,7 +2768,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "guiFields"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:83:1: guiFields : ( guiField )+ ;
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:96:1: guiFields : ( guiField )+ ;
     public SourceExprParser.guiFields_return guiFields() // throws RecognitionException [1]
     {   
         guiFields_stack.Push(new guiFields_scope());
@@ -2583,57 +2777,57 @@ public partial class SourceExprParser : Parser
 
         CommonTree root_0 = null;
 
-        SourceExprParser.guiField_return guiField92 = default(SourceExprParser.guiField_return);
+        SourceExprParser.guiField_return guiField97 = default(SourceExprParser.guiField_return);
 
 
 
-         ((guiFields_scope)guiFields_stack.Peek()).first =  true; ((guiFields_scope)guiFields_stack.Peek()).n =  0; 
+         ((guiFields_scope)guiFields_stack.Peek()).n =  1; 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:89:2: ( ( guiField )+ )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:89:4: ( guiField )+
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:2: ( ( guiField )+ )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:4: ( guiField )+
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:89:4: ( guiField )+
-            	int cnt24 = 0;
+            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:4: ( guiField )+
+            	int cnt25 = 0;
             	do 
             	{
-            	    int alt24 = 2;
-            	    int LA24_0 = input.LA(1);
+            	    int alt25 = 2;
+            	    int LA25_0 = input.LA(1);
 
-            	    if ( (LA24_0 == 21) && ((((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))|| (((guiFields_scope)guiFields_stack.Peek()).first))) )
+            	    if ( (LA25_0 == 21) && ((((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].NumberOfMetaFields)) )
             	    {
-            	        alt24 = 1;
+            	        alt25 = 1;
             	    }
 
 
-            	    switch (alt24) 
+            	    switch (alt25) 
             		{
             			case 1 :
-            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:89:5: guiField
+            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:5: guiField
             			    {
-            			    	PushFollow(FOLLOW_guiField_in_guiFields737);
-            			    	guiField92 = guiField();
+            			    	PushFollow(FOLLOW_guiField_in_guiFields798);
+            			    	guiField97 = guiField();
             			    	state.followingStackPointer--;
 
-            			    	adaptor.AddChild(root_0, guiField92.Tree);
+            			    	adaptor.AddChild(root_0, guiField97.Tree);
             			    	((guiFields_scope)guiFields_stack.Peek()).n++;
 
             			    }
             			    break;
 
             			default:
-            			    if ( cnt24 >= 1 ) goto loop24;
-            		            EarlyExitException eee24 =
-            		                new EarlyExitException(24, input);
-            		            throw eee24;
+            			    if ( cnt25 >= 1 ) goto loop25;
+            		            EarlyExitException eee25 =
+            		                new EarlyExitException(25, input);
+            		            throw eee25;
             	    }
-            	    cnt24++;
+            	    cnt25++;
             	} while (true);
 
-            	loop24:
-            		;	// Stops C# compiler whining that label 'loop24' has no statements
+            	loop25:
+            		;	// Stops C# compiler whining that label 'loop25' has no statements
 
 
             }
@@ -2670,7 +2864,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "guiField"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:91:1: guiField : ( identifyingMetaElement | {...}? => ( '\"' metaElement '\"' )+ -> ( metaElement )+ );
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:103:1: guiField : {...}? => '\"' metaElement '\"' -> metaElement ;
     public SourceExprParser.guiField_return guiField() // throws RecognitionException [1]
     {   
         SourceExprParser.guiField_return retval = new SourceExprParser.guiField_return();
@@ -2678,263 +2872,39 @@ public partial class SourceExprParser : Parser
 
         CommonTree root_0 = null;
 
-        IToken char_literal94 = null;
-        IToken char_literal96 = null;
-        SourceExprParser.identifyingMetaElement_return identifyingMetaElement93 = default(SourceExprParser.identifyingMetaElement_return);
-
-        SourceExprParser.metaElement_return metaElement95 = default(SourceExprParser.metaElement_return);
+        IToken char_literal98 = null;
+        IToken char_literal100 = null;
+        SourceExprParser.metaElement_return metaElement99 = default(SourceExprParser.metaElement_return);
 
 
-        CommonTree char_literal94_tree=null;
-        CommonTree char_literal96_tree=null;
+        CommonTree char_literal98_tree=null;
+        CommonTree char_literal100_tree=null;
         RewriteRuleTokenStream stream_21 = new RewriteRuleTokenStream(adaptor,"token 21");
         RewriteRuleSubtreeStream stream_metaElement = new RewriteRuleSubtreeStream(adaptor,"rule metaElement");
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:91:9: ( identifyingMetaElement | {...}? => ( '\"' metaElement '\"' )+ -> ( metaElement )+ )
-            int alt26 = 2;
-            int LA26_0 = input.LA(1);
-
-            if ( (LA26_0 == 21) && ((((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))|| (((guiFields_scope)guiFields_stack.Peek()).first))) )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:103:9: ({...}? => '\"' metaElement '\"' -> metaElement )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:103:11: {...}? => '\"' metaElement '\"'
             {
-                int LA26_1 = input.LA(2);
-
-                if ( (LA26_1 == ID) && ((((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))|| (((guiFields_scope)guiFields_stack.Peek()).first))) )
-                {
-                    int LA26_2 = input.LA(3);
-
-                    if ( (LA26_2 == 21) && ((((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))|| (((guiFields_scope)guiFields_stack.Peek()).first))) )
-                    {
-                        int LA26_4 = input.LA(4);
-
-                        if ( ((((guiFields_scope)guiFields_stack.Peek()).first)) )
-                        {
-                            alt26 = 1;
-                        }
-                        else if ( (((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))) )
-                        {
-                            alt26 = 2;
-                        }
-                        else 
-                        {
-                            NoViableAltException nvae_d26s4 =
-                                new NoViableAltException("", 26, 4, input);
-
-                            throw nvae_d26s4;
-                        }
-                    }
-                    else if ( (LA26_2 == ID) && (((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))) )
-                    {
-                        alt26 = 2;
-                    }
-                    else 
-                    {
-                        NoViableAltException nvae_d26s2 =
-                            new NoViableAltException("", 26, 2, input);
-
-                        throw nvae_d26s2;
-                    }
-                }
-                else if ( (LA26_1 == INT) && (((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))) )
-                {
-                    alt26 = 2;
-                }
-                else 
-                {
-                    NoViableAltException nvae_d26s1 =
-                        new NoViableAltException("", 26, 1, input);
-
-                    throw nvae_d26s1;
-                }
-            }
-            else 
-            {
-                NoViableAltException nvae_d26s0 =
-                    new NoViableAltException("", 26, 0, input);
-
-                throw nvae_d26s0;
-            }
-            switch (alt26) 
-            {
-                case 1 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:91:11: identifyingMetaElement
-                    {
-                    	root_0 = (CommonTree)adaptor.GetNilNode();
-
-                    	PushFollow(FOLLOW_identifyingMetaElement_in_guiField749);
-                    	identifyingMetaElement93 = identifyingMetaElement();
-                    	state.followingStackPointer--;
-
-                    	adaptor.AddChild(root_0, identifyingMetaElement93.Tree);
-
-                    }
-                    break;
-                case 2 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:92:4: {...}? => ( '\"' metaElement '\"' )+
-                    {
-                    	if ( !(((((guiFields_scope)guiFields_stack.Peek()).first==false && ((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].NumberOfMetaFields))) ) 
-                    	{
-                    	    throw new FailedPredicateException(input, "guiField", "($guiFields::first==false && $guiFields::n < _script.SupportedMetaData[$guiFields::metaType].NumberOfMetaFields)");
-                    	}
-                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:92:121: ( '\"' metaElement '\"' )+
-                    	int cnt25 = 0;
-                    	do 
-                    	{
-                    	    int alt25 = 2;
-                    	    int LA25_0 = input.LA(1);
-
-                    	    if ( (LA25_0 == 21) )
-                    	    {
-                    	        alt25 = 1;
-                    	    }
-
-
-                    	    switch (alt25) 
-                    		{
-                    			case 1 :
-                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:92:122: '\"' metaElement '\"'
-                    			    {
-                    			    	char_literal94=(IToken)Match(input,21,FOLLOW_21_in_guiField757);  
-                    			    	stream_21.Add(char_literal94);
-
-                    			    	PushFollow(FOLLOW_metaElement_in_guiField759);
-                    			    	metaElement95 = metaElement();
-                    			    	state.followingStackPointer--;
-
-                    			    	stream_metaElement.Add(metaElement95.Tree);
-                    			    	char_literal96=(IToken)Match(input,21,FOLLOW_21_in_guiField761);  
-                    			    	stream_21.Add(char_literal96);
-
-
-                    			    }
-                    			    break;
-
-                    			default:
-                    			    if ( cnt25 >= 1 ) goto loop25;
-                    		            EarlyExitException eee25 =
-                    		                new EarlyExitException(25, input);
-                    		            throw eee25;
-                    	    }
-                    	    cnt25++;
-                    	} while (true);
-
-                    	loop25:
-                    		;	// Stops C# compiler whining that label 'loop25' has no statements
-
-
-
-                    	// AST REWRITE
-                    	// elements:          metaElement
-                    	// token labels:      
-                    	// rule labels:       retval
-                    	// token list labels: 
-                    	// rule list labels:  
-                    	// wildcard labels: 
-                    	retval.Tree = root_0;
-                    	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
-
-                    	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 93:3: -> ( metaElement )+
-                    	{
-                    	    if ( !(stream_metaElement.HasNext()) ) {
-                    	        throw new RewriteEarlyExitException();
-                    	    }
-                    	    while ( stream_metaElement.HasNext() )
-                    	    {
-                    	        adaptor.AddChild(root_0, stream_metaElement.NextTree());
-
-                    	    }
-                    	    stream_metaElement.Reset();
-
-                    	}
-
-                    	retval.Tree = root_0;retval.Tree = root_0;
-                    }
-                    break;
-
-            }
-            retval.Stop = input.LT(-1);
-
-            	retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
-            	adaptor.SetTokenBoundaries(retval.Tree, (IToken) retval.Start, (IToken) retval.Stop);
-        }
-        catch (RecognitionException re) 
-    	{
-            ReportError(re);
-            Recover(input,re);
-    	// Conversion of the second argument necessary, but harmless
-    	retval.Tree = (CommonTree)adaptor.ErrorNode(input, (IToken) retval.Start, input.LT(-1), re);
-
-        }
-        finally 
-    	{
-        }
-        return retval;
-    }
-    // $ANTLR end "guiField"
-
-    public class identifyingMetaElement_return : ParserRuleReturnScope
-    {
-        private CommonTree tree;
-        override public object Tree
-        {
-        	get { return tree; }
-        	set { tree = (CommonTree) value; }
-        }
-    };
-
-    // $ANTLR start "identifyingMetaElement"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:95:1: identifyingMetaElement : ({...}? => '\"' id1= ID '\"' ) {...}? -> ID ;
-    public SourceExprParser.identifyingMetaElement_return identifyingMetaElement() // throws RecognitionException [1]
-    {   
-        SourceExprParser.identifyingMetaElement_return retval = new SourceExprParser.identifyingMetaElement_return();
-        retval.Start = input.LT(1);
-
-        CommonTree root_0 = null;
-
-        IToken id1 = null;
-        IToken char_literal97 = null;
-        IToken char_literal98 = null;
-
-        CommonTree id1_tree=null;
-        CommonTree char_literal97_tree=null;
-        CommonTree char_literal98_tree=null;
-        RewriteRuleTokenStream stream_21 = new RewriteRuleTokenStream(adaptor,"token 21");
-        RewriteRuleTokenStream stream_ID = new RewriteRuleTokenStream(adaptor,"token ID");
-
-        try 
-    	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:96:2: ( ({...}? => '\"' id1= ID '\"' ) {...}? -> ID )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:96:4: ({...}? => '\"' id1= ID '\"' ) {...}?
-            {
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:96:4: ({...}? => '\"' id1= ID '\"' )
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:96:5: {...}? => '\"' id1= ID '\"'
+            	if ( !((((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].NumberOfMetaFields)) ) 
             	{
-            		if ( !((((guiFields_scope)guiFields_stack.Peek()).first)) ) 
-            		{
-            		    throw new FailedPredicateException(input, "identifyingMetaElement", "$guiFields::first");
-            		}
-            		char_literal97=(IToken)Match(input,21,FOLLOW_21_in_identifyingMetaElement784);  
-            		stream_21.Add(char_literal97);
-
-            		id1=(IToken)Match(input,ID,FOLLOW_ID_in_identifyingMetaElement788);  
-            		stream_ID.Add(id1);
-
-            		char_literal98=(IToken)Match(input,21,FOLLOW_21_in_identifyingMetaElement790);  
-            		stream_21.Add(char_literal98);
-
-            		 ((guiFields_scope)guiFields_stack.Peek()).metaType = ((id1 != null) ? id1.Text : null); ((guiFields_scope)guiFields_stack.Peek()).first =  false; 
-
+            	    throw new FailedPredicateException(input, "guiField", "$guiFields::n < _script.SupportedMetaData[$guiRule::metaType].NumberOfMetaFields");
             	}
+            	char_literal98=(IToken)Match(input,21,FOLLOW_21_in_guiField812);  
+            	stream_21.Add(char_literal98);
 
-            	if ( !((_script.SupportedMetaData[((id1 != null) ? id1.Text : null)].IsAValidField(((guiFields_scope)guiFields_stack.Peek()).n, ((id1 != null) ? id1.Text : null), ((guiFields_scope)guiFields_stack.Peek()).first) )) ) 
-            	{
-            	    throw new FailedPredicateException(input, "identifyingMetaElement", "_script.SupportedMetaData[$id1.text].IsAValidField($guiFields::n, $id1.text, $guiFields::first) ");
-            	}
+            	PushFollow(FOLLOW_metaElement_in_guiField814);
+            	metaElement99 = metaElement();
+            	state.followingStackPointer--;
+
+            	stream_metaElement.Add(metaElement99.Tree);
+            	char_literal100=(IToken)Match(input,21,FOLLOW_21_in_guiField816);  
+            	stream_21.Add(char_literal100);
+
 
 
             	// AST REWRITE
-            	// elements:          ID
+            	// elements:          metaElement
             	// token labels:      
             	// rule labels:       retval
             	// token list labels: 
@@ -2944,9 +2914,9 @@ public partial class SourceExprParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
 
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 98:3: -> ID
+            	// 104:3: -> metaElement
             	{
-            	    adaptor.AddChild(root_0, stream_ID.NextNode());
+            	    adaptor.AddChild(root_0, stream_metaElement.NextTree());
 
             	}
 
@@ -2971,7 +2941,7 @@ public partial class SourceExprParser : Parser
         }
         return retval;
     }
-    // $ANTLR end "identifyingMetaElement"
+    // $ANTLR end "guiField"
 
     public class metaElement_return : ParserRuleReturnScope
     {
@@ -2984,7 +2954,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "metaElement"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:100:1: metaElement : ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) );
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:106:1: metaElement : ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) );
     public SourceExprParser.metaElement_return metaElement() // throws RecognitionException [1]
     {   
         SourceExprParser.metaElement_return retval = new SourceExprParser.metaElement_return();
@@ -2992,46 +2962,46 @@ public partial class SourceExprParser : Parser
 
         CommonTree root_0 = null;
 
-        IToken INT99 = null;
-        IToken ID100 = null;
+        IToken INT101 = null;
+        IToken ID102 = null;
 
-        CommonTree INT99_tree=null;
-        CommonTree ID100_tree=null;
+        CommonTree INT101_tree=null;
+        CommonTree ID102_tree=null;
         RewriteRuleTokenStream stream_INT = new RewriteRuleTokenStream(adaptor,"token INT");
         RewriteRuleTokenStream stream_ID = new RewriteRuleTokenStream(adaptor,"token ID");
 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:2: ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) )
-            int alt28 = 2;
-            int LA28_0 = input.LA(1);
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:107:2: ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) )
+            int alt27 = 2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA28_0 == INT) && ((_script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) )
+            if ( (LA27_0 == INT) && ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) )
             {
-                alt28 = 1;
+                alt27 = 1;
             }
-            else if ( (LA28_0 == ID) && ((!_script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) )
+            else if ( (LA27_0 == ID) && ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) )
             {
-                alt28 = 2;
+                alt27 = 2;
             }
             else 
             {
-                NoViableAltException nvae_d28s0 =
-                    new NoViableAltException("", 28, 0, input);
+                NoViableAltException nvae_d27s0 =
+                    new NoViableAltException("", 27, 0, input);
 
-                throw nvae_d28s0;
+                throw nvae_d27s0;
             }
-            switch (alt28) 
+            switch (alt27) 
             {
                 case 1 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:102:3: {...}? => INT
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:107:4: {...}? => INT
                     {
-                    	if ( !((_script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) ) 
+                    	if ( !((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) ) 
                     	{
-                    	    throw new FailedPredicateException(input, "metaElement", "_script.SupportedMetaData[$guiFields::metaType].FieldIsInt($guiFields::n)");
+                    	    throw new FailedPredicateException(input, "metaElement", "_script.SupportedMetaData[$guiRule::metaType].FieldIsInt($guiFields::n)");
                     	}
-                    	INT99=(IToken)Match(input,INT,FOLLOW_INT_in_metaElement820);  
-                    	stream_INT.Add(INT99);
+                    	INT101=(IToken)Match(input,INT,FOLLOW_INT_in_metaElement834);  
+                    	stream_INT.Add(INT101);
 
 
 
@@ -3046,9 +3016,9 @@ public partial class SourceExprParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
 
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 103:3: -> ^( METAINT INT )
+                    	// 108:3: -> ^( METAINT INT )
                     	{
-                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:103:6: ^( METAINT INT )
+                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:108:6: ^( METAINT INT )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(METAINT, "METAINT"), root_1);
@@ -3064,48 +3034,48 @@ public partial class SourceExprParser : Parser
                     }
                     break;
                 case 2 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:104:4: {...}? => ( ID )+
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:109:4: {...}? => ( ID )+
                     {
-                    	if ( !((!_script.SupportedMetaData[((guiFields_scope)guiFields_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) ) 
+                    	if ( !((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) ) 
                     	{
-                    	    throw new FailedPredicateException(input, "metaElement", "!_script.SupportedMetaData[$guiFields::metaType].FieldIsInt($guiFields::n)");
+                    	    throw new FailedPredicateException(input, "metaElement", "!_script.SupportedMetaData[$guiRule::metaType].FieldIsInt($guiFields::n)");
                     	}
-                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:104:83: ( ID )+
-                    	int cnt27 = 0;
+                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:109:81: ( ID )+
+                    	int cnt26 = 0;
                     	do 
                     	{
-                    	    int alt27 = 2;
-                    	    int LA27_0 = input.LA(1);
+                    	    int alt26 = 2;
+                    	    int LA26_0 = input.LA(1);
 
-                    	    if ( (LA27_0 == ID) )
+                    	    if ( (LA26_0 == ID) )
                     	    {
-                    	        alt27 = 1;
+                    	        alt26 = 1;
                     	    }
 
 
-                    	    switch (alt27) 
+                    	    switch (alt26) 
                     		{
                     			case 1 :
-                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:104:83: ID
+                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:109:81: ID
                     			    {
-                    			    	ID100=(IToken)Match(input,ID,FOLLOW_ID_in_metaElement837);  
-                    			    	stream_ID.Add(ID100);
+                    			    	ID102=(IToken)Match(input,ID,FOLLOW_ID_in_metaElement851);  
+                    			    	stream_ID.Add(ID102);
 
 
                     			    }
                     			    break;
 
                     			default:
-                    			    if ( cnt27 >= 1 ) goto loop27;
-                    		            EarlyExitException eee27 =
-                    		                new EarlyExitException(27, input);
-                    		            throw eee27;
+                    			    if ( cnt26 >= 1 ) goto loop26;
+                    		            EarlyExitException eee26 =
+                    		                new EarlyExitException(26, input);
+                    		            throw eee26;
                     	    }
-                    	    cnt27++;
+                    	    cnt26++;
                     	} while (true);
 
-                    	loop27:
-                    		;	// Stops C# compiler whining that label 'loop27' has no statements
+                    	loop26:
+                    		;	// Stops C# compiler whining that label 'loop26' has no statements
 
 
 
@@ -3120,9 +3090,9 @@ public partial class SourceExprParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
 
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 105:3: -> ^( METATEXT ( ID )+ )
+                    	// 110:3: -> ^( METATEXT ( ID )+ )
                     	{
-                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:105:6: ^( METATEXT ( ID )+ )
+                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:110:6: ^( METATEXT ( ID )+ )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(METATEXT, "METATEXT"), root_1);
@@ -3178,7 +3148,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "emptyQuotes"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:107:2: emptyQuotes : '\"' '\"' ;
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:112:2: emptyQuotes : '\"' '\"' ;
     public SourceExprParser.emptyQuotes_return emptyQuotes() // throws RecognitionException [1]
     {   
         SourceExprParser.emptyQuotes_return retval = new SourceExprParser.emptyQuotes_return();
@@ -3186,26 +3156,26 @@ public partial class SourceExprParser : Parser
 
         CommonTree root_0 = null;
 
-        IToken char_literal101 = null;
-        IToken char_literal102 = null;
+        IToken char_literal103 = null;
+        IToken char_literal104 = null;
 
-        CommonTree char_literal101_tree=null;
-        CommonTree char_literal102_tree=null;
+        CommonTree char_literal103_tree=null;
+        CommonTree char_literal104_tree=null;
 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:108:3: ( '\"' '\"' )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:108:5: '\"' '\"'
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:113:3: ( '\"' '\"' )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:113:5: '\"' '\"'
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	char_literal101=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes861); 
-            		char_literal101_tree = (CommonTree)adaptor.Create(char_literal101);
-            		adaptor.AddChild(root_0, char_literal101_tree);
+            	char_literal103=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes875); 
+            		char_literal103_tree = (CommonTree)adaptor.Create(char_literal103);
+            		adaptor.AddChild(root_0, char_literal103_tree);
 
-            	char_literal102=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes862); 
-            		char_literal102_tree = (CommonTree)adaptor.Create(char_literal102);
-            		adaptor.AddChild(root_0, char_literal102_tree);
+            	char_literal104=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes876); 
+            		char_literal104_tree = (CommonTree)adaptor.Create(char_literal104);
+            		adaptor.AddChild(root_0, char_literal104_tree);
 
 
             }
@@ -3234,9 +3204,12 @@ public partial class SourceExprParser : Parser
 
 
    	protected DFA8 dfa8;
+   	protected DFA24 dfa24;
 	private void InitializeCyclicDFAs()
 	{
     	this.dfa8 = new DFA8(this);
+    	this.dfa24 = new DFA24(this);
+	    this.dfa24.specialStateTransitionHandler = new DFA.SpecialStateTransitionHandler(DFA24_SpecialStateTransition);
 	}
 
     const string DFA8_eotS =
@@ -3246,17 +3219,19 @@ public partial class SourceExprParser : Parser
         "\x01\x1b";
     const string DFA8_minS =
         "\x01\x04\x02\x10\x01\x06\x01\x10\x02\uffff\x02\x10\x01\x04\x01"+
-        "\x10\x01\x04\x01\x10\x06\uffff\x01\x04\x01\x06\x02\uffff\x01\x15"+
-        "\x01\x04\x01\x06\x02\uffff\x01\x15\x01\uffff\x01\x04\x01\uffff\x01"+
-        "\x04";
+        "\x10\x01\x04\x01\x10\x06\uffff\x01\x06\x01\uffff\x01\x04\x01\uffff"+
+        "\x01\x15\x01\x06\x01\uffff\x01\x04\x01\uffff\x01\x15\x01\uffff\x01"+
+        "\x04\x01\uffff\x01\x04";
     const string DFA8_maxS =
         "\x01\x10\x02\x15\x01\x10\x01\x15\x02\uffff\x03\x15\x01\x10\x01"+
-        "\x15\x01\x10\x06\uffff\x01\x15\x01\x10\x02\uffff\x02\x15\x01\x10"+
-        "\x02\uffff\x01\x15\x01\uffff\x01\x15\x01\uffff\x01\x15";
+        "\x15\x01\x10\x06\uffff\x01\x10\x01\uffff\x01\x15\x01\uffff\x01\x15"+
+        "\x01\x10\x01\uffff\x01\x15\x01\uffff\x01\x15\x01\uffff\x01\x15\x01"+
+        "\uffff\x01\x15";
     const string DFA8_acceptS =
         "\x05\uffff\x01\x09\x01\x0a\x06\uffff\x01\x07\x01\x08\x01\x0b\x01"+
-        "\x0c\x01\x0d\x01\x0e\x02\uffff\x01\x02\x01\x03\x03\uffff\x01\x05"+
-        "\x01\x06\x01\uffff\x01\x01\x01\uffff\x01\x04\x01\uffff";
+        "\x0c\x01\x0d\x01\x0e\x01\uffff\x01\x02\x01\uffff\x01\x03\x02\uffff"+
+        "\x01\x05\x01\uffff\x01\x06\x01\uffff\x01\x01\x01\uffff\x01\x04\x01"+
+        "\uffff";
     const string DFA8_specialS =
         "\x21\uffff}>";
     static readonly string[] DFA8_transitionS = {
@@ -3270,11 +3245,11 @@ public partial class SourceExprParser : Parser
             "",
             "\x01\x10\x04\uffff\x01\x0f",
             "\x01\x12\x04\uffff\x01\x11",
-            "\x03\x16\x01\x14\x04\x16\x03\uffff\x01\x16\x01\x15\x04\uffff"+
-            "\x01\x13",
+            "\x03\x16\x01\x13\x04\x16\x03\uffff\x01\x16\x01\x14\x04\uffff"+
+            "\x01\x15",
             "\x01\x17",
-            "\x03\x1b\x01\x19\x04\x1b\x03\uffff\x01\x1b\x01\x1a\x04\uffff"+
-            "\x01\x18",
+            "\x03\x1b\x01\x18\x04\x1b\x03\uffff\x01\x1b\x01\x19\x04\uffff"+
+            "\x01\x1a",
             "\x01\x1c",
             "",
             "",
@@ -3282,22 +3257,22 @@ public partial class SourceExprParser : Parser
             "",
             "",
             "",
-            "\x07\x1d\x05\uffff\x01\x1d\x04\uffff\x01\x16",
-            "\x01\x16\x09\uffff\x01\x15",
+            "\x01\x16\x09\uffff\x01\x14",
             "",
+            "\x07\x1d\x05\uffff\x01\x1d\x04\uffff\x01\x16",
             "",
             "\x01\x1e",
-            "\x07\x1f\x05\uffff\x01\x1f\x04\uffff\x01\x1b",
-            "\x01\x1b\x09\uffff\x01\x1a",
+            "\x01\x1b\x09\uffff\x01\x19",
             "",
+            "\x07\x1f\x05\uffff\x01\x1f\x04\uffff\x01\x1b",
             "",
             "\x01\x20",
             "",
-            "\x03\x16\x01\x14\x04\x16\x03\uffff\x01\x16\x01\x15\x04\uffff"+
-            "\x01\x13",
+            "\x03\x16\x01\x13\x04\x16\x03\uffff\x01\x16\x01\x14\x04\uffff"+
+            "\x01\x15",
             "",
-            "\x03\x1b\x01\x19\x04\x1b\x03\uffff\x01\x1b\x01\x1a\x04\uffff"+
-            "\x01\x18"
+            "\x03\x1b\x01\x18\x04\x1b\x03\uffff\x01\x1b\x01\x19\x04\uffff"+
+            "\x01\x1a"
     };
 
     static readonly short[] DFA8_eot = DFA.UnpackEncodedString(DFA8_eotS);
@@ -3331,110 +3306,991 @@ public partial class SourceExprParser : Parser
 
     }
 
+    const string DFA24_eotS =
+        "\x34\uffff";
+    const string DFA24_eofS =
+        "\x04\uffff\x01\x05\x09\uffff\x01\x05\x25\uffff";
+    const string DFA24_minS =
+        "\x01\x15\x01\x10\x01\x15\x01\x10\x01\x04\x01\uffff\x02\x10\x01"+
+        "\x06\x01\x10\x01\x00\x03\x10\x01\x04\x01\x00\x01\x10\x01\x00\x02"+
+        "\x10\x01\x00\x01\uffff\x03\x10\x01\x00\x01\x10\x01\x00\x03\x15\x02"+
+        "\x10\x01\x15\x01\x10\x01\x00\x01\x10\x04\x00\x02\x10\x01\x15\x01"+
+        "\x10\x01\x00\x01\x10\x01\x15\x01\x10\x01\x15\x01\x10\x01\x00";
+    const string DFA24_maxS =
+        "\x01\x15\x01\x11\x03\x15\x01\uffff\x02\x15\x01\x10\x01\x15\x01"+
+        "\x00\x03\x15\x01\x10\x01\x00\x01\x10\x01\x00\x02\x10\x01\x00\x01"+
+        "\uffff\x01\x15\x01\x10\x01\x15\x01\x00\x01\x15\x01\x00\x04\x15\x01"+
+        "\x10\x02\x15\x01\x00\x01\x15\x04\x00\x01\x15\x01\x10\x02\x15\x01"+
+        "\x00\x01\x10\x04\x15\x01\x00";
+    const string DFA24_acceptS =
+        "\x05\uffff\x01\x01\x0f\uffff\x01\x02\x1e\uffff";
+    const string DFA24_specialS =
+        "\x01\x0c\x01\x02\x01\x06\x01\x07\x01\x2c\x01\uffff\x01\x00\x01"+
+        "\x22\x01\x15\x01\x24\x01\x2a\x01\x05\x01\x2e\x01\x14\x01\x23\x01"+
+        "\x0e\x01\x18\x01\x09\x01\x17\x01\x28\x01\x26\x01\uffff\x01\x0d\x01"+
+        "\x1e\x01\x2d\x01\x04\x01\x16\x01\x30\x01\x11\x01\x12\x01\x27\x01"+
+        "\x13\x01\x1f\x01\x1b\x01\x29\x01\x08\x01\x2b\x01\x01\x01\x25\x01"+
+        "\x03\x01\x2f\x01\x0f\x01\x20\x01\x1c\x01\x10\x01\x0a\x01\x21\x01"+
+        "\x1d\x01\x19\x01\x1a\x01\x31\x01\x0b}>";
+    static readonly string[] DFA24_transitionS = {
+            "\x01\x01",
+            "\x01\x03\x01\x02",
+            "\x01\x04",
+            "\x01\x03\x04\uffff\x01\x04",
+            "\x01\x06\x01\x07\x01\x09\x01\x08\x01\x0b\x01\x0c\x01\x0d\x01"+
+            "\x05\x03\uffff\x01\x0e\x01\x0a\x04\uffff\x01\x01",
+            "",
+            "\x01\x0f\x04\uffff\x01\x10",
+            "\x01\x11\x04\uffff\x01\x12",
+            "\x01\x09\x09\uffff\x01\x0a",
+            "\x01\x14\x04\uffff\x01\x13",
+            "\x01\uffff",
+            "\x01\x16\x04\uffff\x01\x17",
+            "\x01\x19\x04\uffff\x01\x18",
+            "\x01\x1b\x04\uffff\x01\x1a",
+            "\x01\x06\x01\x07\x01\x09\x01\x08\x01\x0b\x01\x0c\x01\x0d\x01"+
+            "\x05\x03\uffff\x01\x0e\x01\x0a",
+            "\x01\uffff",
+            "\x01\x1c",
+            "\x01\uffff",
+            "\x01\x1d",
+            "\x01\x1e",
+            "\x01\uffff",
+            "",
+            "\x01\x1f\x04\uffff\x01\x20",
+            "\x01\x21",
+            "\x01\x22\x04\uffff\x01\x23",
+            "\x01\uffff",
+            "\x01\x24\x04\uffff\x01\x25",
+            "\x01\uffff",
+            "\x01\x26",
+            "\x01\x27",
+            "\x01\x28",
+            "\x01\x29\x04\uffff\x01\x2a",
+            "\x01\x2b",
+            "\x01\x2c",
+            "\x01\x22\x04\uffff\x01\x23",
+            "\x01\uffff",
+            "\x01\x24\x04\uffff\x01\x25",
+            "\x01\uffff",
+            "\x01\uffff",
+            "\x01\uffff",
+            "\x01\uffff",
+            "\x01\x2d\x04\uffff\x01\x2e",
+            "\x01\x2f",
+            "\x01\x30",
+            "\x01\x1f\x04\uffff\x01\x20",
+            "\x01\uffff",
+            "\x01\x31",
+            "\x01\x32",
+            "\x01\x29\x04\uffff\x01\x2a",
+            "\x01\x33",
+            "\x01\x2d\x04\uffff\x01\x2e",
+            "\x01\uffff"
+    };
+
+    static readonly short[] DFA24_eot = DFA.UnpackEncodedString(DFA24_eotS);
+    static readonly short[] DFA24_eof = DFA.UnpackEncodedString(DFA24_eofS);
+    static readonly char[] DFA24_min = DFA.UnpackEncodedStringToUnsignedChars(DFA24_minS);
+    static readonly char[] DFA24_max = DFA.UnpackEncodedStringToUnsignedChars(DFA24_maxS);
+    static readonly short[] DFA24_accept = DFA.UnpackEncodedString(DFA24_acceptS);
+    static readonly short[] DFA24_special = DFA.UnpackEncodedString(DFA24_specialS);
+    static readonly short[][] DFA24_transition = DFA.UnpackEncodedStringArray(DFA24_transitionS);
+
+    protected class DFA24 : DFA
+    {
+        public DFA24(BaseRecognizer recognizer)
+        {
+            this.recognizer = recognizer;
+            this.decisionNumber = 24;
+            this.eot = DFA24_eot;
+            this.eof = DFA24_eof;
+            this.min = DFA24_min;
+            this.max = DFA24_max;
+            this.accept = DFA24_accept;
+            this.special = DFA24_special;
+            this.transition = DFA24_transition;
+
+        }
+
+        override public string Description
+        {
+            get { return "91:1: metaEnding : ({...}? => guiFields | {...}? => guiFields ( LINEBREAK )* stat );"; }
+        }
+
+    }
+
+
+    protected internal int DFA24_SpecialStateTransition(DFA dfa, int s, IIntStream _input) //throws NoViableAltException
+    {
+            ITokenStream input = (ITokenStream)_input;
+    	int _s = s;
+        switch ( s )
+        {
+               	case 0 : 
+                   	int LA24_6 = input.LA(1);
+
+                   	 
+                   	int index24_6 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_6 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 15; }
+
+                   	else if ( (LA24_6 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 16; }
+
+                   	 
+                   	input.Seek(index24_6);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 1 : 
+                   	int LA24_37 = input.LA(1);
+
+                   	 
+                   	int index24_37 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_37);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 2 : 
+                   	int LA24_1 = input.LA(1);
+
+                   	 
+                   	int index24_1 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_1 == INT) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 2; }
+
+                   	else if ( (LA24_1 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 3; }
+
+                   	 
+                   	input.Seek(index24_1);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 3 : 
+                   	int LA24_39 = input.LA(1);
+
+                   	 
+                   	int index24_39 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_39);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 4 : 
+                   	int LA24_25 = input.LA(1);
+
+                   	 
+                   	int index24_25 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_25);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 5 : 
+                   	int LA24_11 = input.LA(1);
+
+                   	 
+                   	int index24_11 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_11 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 22; }
+
+                   	else if ( (LA24_11 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 23; }
+
+                   	 
+                   	input.Seek(index24_11);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 6 : 
+                   	int LA24_2 = input.LA(1);
+
+                   	 
+                   	int index24_2 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_2 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 4; }
+
+                   	 
+                   	input.Seek(index24_2);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 7 : 
+                   	int LA24_3 = input.LA(1);
+
+                   	 
+                   	int index24_3 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_3 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 4; }
+
+                   	else if ( (LA24_3 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 3; }
+
+                   	 
+                   	input.Seek(index24_3);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 8 : 
+                   	int LA24_35 = input.LA(1);
+
+                   	 
+                   	int index24_35 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_35);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 9 : 
+                   	int LA24_17 = input.LA(1);
+
+                   	 
+                   	int index24_17 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_17);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 10 : 
+                   	int LA24_45 = input.LA(1);
+
+                   	 
+                   	int index24_45 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_45);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 11 : 
+                   	int LA24_51 = input.LA(1);
+
+                   	 
+                   	int index24_51 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_51);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 12 : 
+                   	int LA24_0 = input.LA(1);
+
+                   	 
+                   	int index24_0 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_0 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 1; }
+
+                   	 
+                   	input.Seek(index24_0);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 13 : 
+                   	int LA24_22 = input.LA(1);
+
+                   	 
+                   	int index24_22 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_22 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 31; }
+
+                   	else if ( (LA24_22 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 32; }
+
+                   	 
+                   	input.Seek(index24_22);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 14 : 
+                   	int LA24_15 = input.LA(1);
+
+                   	 
+                   	int index24_15 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_15);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 15 : 
+                   	int LA24_41 = input.LA(1);
+
+                   	 
+                   	int index24_41 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_41 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 45; }
+
+                   	else if ( (LA24_41 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 46; }
+
+                   	 
+                   	input.Seek(index24_41);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 16 : 
+                   	int LA24_44 = input.LA(1);
+
+                   	 
+                   	int index24_44 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_44 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 31; }
+
+                   	else if ( (LA24_44 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 32; }
+
+                   	 
+                   	input.Seek(index24_44);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 17 : 
+                   	int LA24_28 = input.LA(1);
+
+                   	 
+                   	int index24_28 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_28 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 38; }
+
+                   	 
+                   	input.Seek(index24_28);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 18 : 
+                   	int LA24_29 = input.LA(1);
+
+                   	 
+                   	int index24_29 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_29 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 39; }
+
+                   	 
+                   	input.Seek(index24_29);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 19 : 
+                   	int LA24_31 = input.LA(1);
+
+                   	 
+                   	int index24_31 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_31 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 41; }
+
+                   	else if ( (LA24_31 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 42; }
+
+                   	 
+                   	input.Seek(index24_31);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 20 : 
+                   	int LA24_13 = input.LA(1);
+
+                   	 
+                   	int index24_13 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_13 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 26; }
+
+                   	else if ( (LA24_13 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 27; }
+
+                   	 
+                   	input.Seek(index24_13);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 21 : 
+                   	int LA24_8 = input.LA(1);
+
+                   	 
+                   	int index24_8 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_8 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 10; }
+
+                   	else if ( (LA24_8 == EXEC) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 9; }
+
+                   	 
+                   	input.Seek(index24_8);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 22 : 
+                   	int LA24_26 = input.LA(1);
+
+                   	 
+                   	int index24_26 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_26 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 36; }
+
+                   	else if ( (LA24_26 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 37; }
+
+                   	 
+                   	input.Seek(index24_26);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 23 : 
+                   	int LA24_18 = input.LA(1);
+
+                   	 
+                   	int index24_18 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_18 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 29; }
+
+                   	 
+                   	input.Seek(index24_18);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 24 : 
+                   	int LA24_16 = input.LA(1);
+
+                   	 
+                   	int index24_16 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_16 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 28; }
+
+                   	 
+                   	input.Seek(index24_16);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 25 : 
+                   	int LA24_48 = input.LA(1);
+
+                   	 
+                   	int index24_48 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_48 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 41; }
+
+                   	else if ( (LA24_48 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 42; }
+
+                   	 
+                   	input.Seek(index24_48);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 26 : 
+                   	int LA24_49 = input.LA(1);
+
+                   	 
+                   	int index24_49 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_49 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 51; }
+
+                   	 
+                   	input.Seek(index24_49);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 27 : 
+                   	int LA24_33 = input.LA(1);
+
+                   	 
+                   	int index24_33 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_33 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 44; }
+
+                   	 
+                   	input.Seek(index24_33);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 28 : 
+                   	int LA24_43 = input.LA(1);
+
+                   	 
+                   	int index24_43 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_43 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 48; }
+
+                   	 
+                   	input.Seek(index24_43);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 29 : 
+                   	int LA24_47 = input.LA(1);
+
+                   	 
+                   	int index24_47 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_47 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 50; }
+
+                   	 
+                   	input.Seek(index24_47);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 30 : 
+                   	int LA24_23 = input.LA(1);
+
+                   	 
+                   	int index24_23 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_23 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 33; }
+
+                   	 
+                   	input.Seek(index24_23);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 31 : 
+                   	int LA24_32 = input.LA(1);
+
+                   	 
+                   	int index24_32 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_32 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 43; }
+
+                   	 
+                   	input.Seek(index24_32);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 32 : 
+                   	int LA24_42 = input.LA(1);
+
+                   	 
+                   	int index24_42 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_42 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 47; }
+
+                   	 
+                   	input.Seek(index24_42);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 33 : 
+                   	int LA24_46 = input.LA(1);
+
+                   	 
+                   	int index24_46 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_46 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 49; }
+
+                   	 
+                   	input.Seek(index24_46);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 34 : 
+                   	int LA24_7 = input.LA(1);
+
+                   	 
+                   	int index24_7 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_7 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 17; }
+
+                   	else if ( (LA24_7 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 18; }
+
+                   	 
+                   	input.Seek(index24_7);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 35 : 
+                   	int LA24_14 = input.LA(1);
+
+                   	 
+                   	int index24_14 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_14 == EOF || LA24_14 == META) && (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (LA24_14 == ALIAS) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 6; }
+
+                   	else if ( (LA24_14 == BIND) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 7; }
+
+                   	else if ( (LA24_14 == RCON) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 8; }
+
+                   	else if ( (LA24_14 == EXEC) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 9; }
+
+                   	else if ( (LA24_14 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 10; }
+
+                   	else if ( (LA24_14 == INCREMENT) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 11; }
+
+                   	else if ( (LA24_14 == ECHO) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 12; }
+
+                   	else if ( (LA24_14 == SAY) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 13; }
+
+                   	else if ( (LA24_14 == LINEBREAK) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 14; }
+
+                   	 
+                   	input.Seek(index24_14);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 36 : 
+                   	int LA24_9 = input.LA(1);
+
+                   	 
+                   	int index24_9 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_9 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 19; }
+
+                   	else if ( (LA24_9 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 20; }
+
+                   	 
+                   	input.Seek(index24_9);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 37 : 
+                   	int LA24_38 = input.LA(1);
+
+                   	 
+                   	int index24_38 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_38);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 38 : 
+                   	int LA24_20 = input.LA(1);
+
+                   	 
+                   	int index24_20 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_20);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 39 : 
+                   	int LA24_30 = input.LA(1);
+
+                   	 
+                   	int index24_30 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_30 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 40; }
+
+                   	 
+                   	input.Seek(index24_30);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 40 : 
+                   	int LA24_19 = input.LA(1);
+
+                   	 
+                   	int index24_19 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_19 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 30; }
+
+                   	 
+                   	input.Seek(index24_19);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 41 : 
+                   	int LA24_34 = input.LA(1);
+
+                   	 
+                   	int index24_34 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_34 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 35; }
+
+                   	else if ( (LA24_34 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 34; }
+
+                   	 
+                   	input.Seek(index24_34);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 42 : 
+                   	int LA24_10 = input.LA(1);
+
+                   	 
+                   	int index24_10 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_10);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 43 : 
+                   	int LA24_36 = input.LA(1);
+
+                   	 
+                   	int index24_36 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_36 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 37; }
+
+                   	else if ( (LA24_36 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 36; }
+
+                   	 
+                   	input.Seek(index24_36);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 44 : 
+                   	int LA24_4 = input.LA(1);
+
+                   	 
+                   	int index24_4 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_4 == EOF || LA24_4 == META) && (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (LA24_4 == ALIAS) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 6; }
+
+                   	else if ( (LA24_4 == BIND) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 7; }
+
+                   	else if ( (LA24_4 == RCON) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 8; }
+
+                   	else if ( (LA24_4 == EXEC) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 9; }
+
+                   	else if ( (LA24_4 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 10; }
+
+                   	else if ( (LA24_4 == INCREMENT) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 11; }
+
+                   	else if ( (LA24_4 == ECHO) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 12; }
+
+                   	else if ( (LA24_4 == SAY) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 13; }
+
+                   	else if ( (LA24_4 == LINEBREAK) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 14; }
+
+                   	else if ( (LA24_4 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 1; }
+
+                   	 
+                   	input.Seek(index24_4);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 45 : 
+                   	int LA24_24 = input.LA(1);
+
+                   	 
+                   	int index24_24 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_24 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 34; }
+
+                   	else if ( (LA24_24 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 35; }
+
+                   	 
+                   	input.Seek(index24_24);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 46 : 
+                   	int LA24_12 = input.LA(1);
+
+                   	 
+                   	int index24_12 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_12 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 24; }
+
+                   	else if ( (LA24_12 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 25; }
+
+                   	 
+                   	input.Seek(index24_12);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 47 : 
+                   	int LA24_40 = input.LA(1);
+
+                   	 
+                   	int index24_40 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_40);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 48 : 
+                   	int LA24_27 = input.LA(1);
+
+                   	 
+                   	int index24_27 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+
+                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+
+                   	 
+                   	input.Seek(index24_27);
+                   	if ( s >= 0 ) return s;
+                   	break;
+               	case 49 : 
+                   	int LA24_50 = input.LA(1);
+
+                   	 
+                   	int index24_50 = input.Index();
+                   	input.Rewind();
+                   	s = -1;
+                   	if ( (LA24_50 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 45; }
+
+                   	else if ( (LA24_50 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 46; }
+
+                   	 
+                   	input.Seek(index24_50);
+                   	if ( s >= 0 ) return s;
+                   	break;
+        }
+        NoViableAltException nvae24 =
+            new NoViableAltException(dfa.Description, 24, _s, input);
+        dfa.Error(nvae24);
+        throw nvae24;
+    }
  
 
-    public static readonly BitSet FOLLOW_guiRule_in_prog142 = new BitSet(new ulong[]{0x0000000000018FF2UL});
-    public static readonly BitSet FOLLOW_stat_in_prog148 = new BitSet(new ulong[]{0x0000000000018FF2UL});
-    public static readonly BitSet FOLLOW_LINEBREAK_in_prog154 = new BitSet(new ulong[]{0x0000000000018FF2UL});
-    public static readonly BitSet FOLLOW_ALIAS_in_stat170 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat172 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat174 = new BitSet(new ulong[]{0x00000000000107F0UL});
-    public static readonly BitSet FOLLOW_multExpr_in_stat176 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat178 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ALIAS_in_stat193 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat195 = new BitSet(new ulong[]{0x0000000000010080UL});
-    public static readonly BitSet FOLLOW_command_in_stat197 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ALIAS_in_stat212 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat214 = new BitSet(new ulong[]{0x0000000000200002UL});
-    public static readonly BitSet FOLLOW_emptyQuotes_in_stat216 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BIND_in_stat230 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat232 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat234 = new BitSet(new ulong[]{0x00000000000107F0UL});
-    public static readonly BitSet FOLLOW_multExpr_in_stat236 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat238 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BIND_in_stat254 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat256 = new BitSet(new ulong[]{0x0000000000010080UL});
-    public static readonly BitSet FOLLOW_command_in_stat258 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BIND_in_stat273 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat275 = new BitSet(new ulong[]{0x0000000000200002UL});
-    public static readonly BitSet FOLLOW_emptyQuotes_in_stat277 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RCON_in_stat291 = new BitSet(new ulong[]{0x0000000000000040UL});
-    public static readonly BitSet FOLLOW_EXEC_in_stat294 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat296 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_stat298 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat300 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RCON_in_stat316 = new BitSet(new ulong[]{0x0000000000000040UL});
-    public static readonly BitSet FOLLOW_EXEC_in_stat319 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_stat321 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_command_in_stat337 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INCREMENT_in_stat342 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_guiRule_in_prog140 = new BitSet(new ulong[]{0x0000000000018FF2UL});
+    public static readonly BitSet FOLLOW_stat_in_prog146 = new BitSet(new ulong[]{0x0000000000018FF2UL});
+    public static readonly BitSet FOLLOW_LINEBREAK_in_prog152 = new BitSet(new ulong[]{0x0000000000018FF2UL});
+    public static readonly BitSet FOLLOW_ALIAS_in_stat168 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_stat170 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat172 = new BitSet(new ulong[]{0x00000000000107F0UL});
+    public static readonly BitSet FOLLOW_multExpr_in_stat174 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat176 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ALIAS_in_stat191 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_stat193 = new BitSet(new ulong[]{0x0000000000010080UL});
+    public static readonly BitSet FOLLOW_command_in_stat195 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ALIAS_in_stat210 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_stat212 = new BitSet(new ulong[]{0x0000000000200002UL});
+    public static readonly BitSet FOLLOW_emptyQuotes_in_stat214 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BIND_in_stat228 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_stat230 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat232 = new BitSet(new ulong[]{0x00000000000107F0UL});
+    public static readonly BitSet FOLLOW_multExpr_in_stat234 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat236 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BIND_in_stat252 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_stat254 = new BitSet(new ulong[]{0x0000000000010080UL});
+    public static readonly BitSet FOLLOW_command_in_stat256 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BIND_in_stat271 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_stat273 = new BitSet(new ulong[]{0x0000000000200002UL});
+    public static readonly BitSet FOLLOW_emptyQuotes_in_stat275 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RCON_in_stat289 = new BitSet(new ulong[]{0x0000000000000040UL});
+    public static readonly BitSet FOLLOW_EXEC_in_stat292 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat294 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_stat296 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat298 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RCON_in_stat314 = new BitSet(new ulong[]{0x0000000000000040UL});
+    public static readonly BitSet FOLLOW_EXEC_in_stat317 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_stat319 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_command_in_stat335 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INCREMENT_in_stat340 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_stat342 = new BitSet(new ulong[]{0x0000000000210000UL});
     public static readonly BitSet FOLLOW_id_in_stat344 = new BitSet(new ulong[]{0x0000000000210000UL});
     public static readonly BitSet FOLLOW_id_in_stat346 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat348 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_stat350 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ECHO_in_stat369 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat371 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_ID_in_stat373 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_21_in_stat376 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ECHO_in_stat385 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_stat387 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SAY_in_stat396 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_stat398 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_ID_in_stat400 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_21_in_stat403 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_SAY_in_stat412 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_stat414 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_innerStat_in_multExpr428 = new BitSet(new ulong[]{0x0000000000008000UL});
-    public static readonly BitSet FOLLOW_LINEBREAK_in_multExpr431 = new BitSet(new ulong[]{0x00000000000107F0UL});
-    public static readonly BitSet FOLLOW_innerStat_in_multExpr434 = new BitSet(new ulong[]{0x0000000000008002UL});
-    public static readonly BitSet FOLLOW_ALIAS_in_innerStat446 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerStat448 = new BitSet(new ulong[]{0x0000000000010082UL});
-    public static readonly BitSet FOLLOW_innerCommand_in_innerStat450 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_BIND_in_innerStat467 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerStat469 = new BitSet(new ulong[]{0x0000000000010082UL});
-    public static readonly BitSet FOLLOW_innerCommand_in_innerStat471 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_innerCommand_in_innerStat488 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INCREMENT_in_innerStat493 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_id_in_stat348 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ECHO_in_stat367 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat369 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_ID_in_stat371 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_21_in_stat374 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ECHO_in_stat383 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_stat385 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SAY_in_stat394 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_stat396 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_ID_in_stat398 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_21_in_stat401 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_SAY_in_stat410 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_stat412 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_innerStat_in_multExpr426 = new BitSet(new ulong[]{0x0000000000008000UL});
+    public static readonly BitSet FOLLOW_LINEBREAK_in_multExpr429 = new BitSet(new ulong[]{0x00000000000107F0UL});
+    public static readonly BitSet FOLLOW_innerStat_in_multExpr432 = new BitSet(new ulong[]{0x0000000000008002UL});
+    public static readonly BitSet FOLLOW_ALIAS_in_innerStat444 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_innerStat446 = new BitSet(new ulong[]{0x0000000000010082UL});
+    public static readonly BitSet FOLLOW_innerCommand_in_innerStat448 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_BIND_in_innerStat465 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_innerStat467 = new BitSet(new ulong[]{0x0000000000010082UL});
+    public static readonly BitSet FOLLOW_innerCommand_in_innerStat469 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_innerCommand_in_innerStat486 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INCREMENT_in_innerStat491 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_innerStat493 = new BitSet(new ulong[]{0x0000000000010000UL});
     public static readonly BitSet FOLLOW_ID_in_innerStat495 = new BitSet(new ulong[]{0x0000000000010000UL});
     public static readonly BitSet FOLLOW_ID_in_innerStat497 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerStat499 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerStat501 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RCON_in_innerStat520 = new BitSet(new ulong[]{0x0000000000000040UL});
-    public static readonly BitSet FOLLOW_EXEC_in_innerStat523 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerStat525 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ECHO_in_innerStat538 = new BitSet(new ulong[]{0x0000000000010002UL});
-    public static readonly BitSet FOLLOW_ID_in_innerStat540 = new BitSet(new ulong[]{0x0000000000010002UL});
-    public static readonly BitSet FOLLOW_SAY_in_innerStat550 = new BitSet(new ulong[]{0x0000000000010002UL});
-    public static readonly BitSet FOLLOW_ID_in_innerStat552 = new BitSet(new ulong[]{0x0000000000010002UL});
-    public static readonly BitSet FOLLOW_ID_in_id568 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_21_in_id573 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_id575 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_id577 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RCON_in_command591 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_command594 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RCON_in_command611 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_command614 = new BitSet(new ulong[]{0x0000000000210000UL});
-    public static readonly BitSet FOLLOW_id_in_command616 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RCON_in_innerCommand641 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerCommand644 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_RCON_in_innerCommand661 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerCommand664 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_innerCommand666 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_META_in_guiRule690 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_guiFields_in_guiRule692 = new BitSet(new ulong[]{0x00000000000187F0UL});
-    public static readonly BitSet FOLLOW_LINEBREAK_in_guiRule694 = new BitSet(new ulong[]{0x00000000000187F0UL});
-    public static readonly BitSet FOLLOW_stat_in_guiRule697 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_guiField_in_guiFields737 = new BitSet(new ulong[]{0x0000000000200002UL});
-    public static readonly BitSet FOLLOW_identifyingMetaElement_in_guiField749 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_21_in_guiField757 = new BitSet(new ulong[]{0x0000000000030000UL});
-    public static readonly BitSet FOLLOW_metaElement_in_guiField759 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_guiField761 = new BitSet(new ulong[]{0x0000000000200002UL});
-    public static readonly BitSet FOLLOW_21_in_identifyingMetaElement784 = new BitSet(new ulong[]{0x0000000000010000UL});
-    public static readonly BitSet FOLLOW_ID_in_identifyingMetaElement788 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_identifyingMetaElement790 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INT_in_metaElement820 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ID_in_metaElement837 = new BitSet(new ulong[]{0x0000000000010002UL});
-    public static readonly BitSet FOLLOW_21_in_emptyQuotes861 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_emptyQuotes862 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ID_in_innerStat499 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RCON_in_innerStat518 = new BitSet(new ulong[]{0x0000000000000040UL});
+    public static readonly BitSet FOLLOW_EXEC_in_innerStat521 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_innerStat523 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ECHO_in_innerStat536 = new BitSet(new ulong[]{0x0000000000010002UL});
+    public static readonly BitSet FOLLOW_ID_in_innerStat538 = new BitSet(new ulong[]{0x0000000000010002UL});
+    public static readonly BitSet FOLLOW_SAY_in_innerStat548 = new BitSet(new ulong[]{0x0000000000010002UL});
+    public static readonly BitSet FOLLOW_ID_in_innerStat550 = new BitSet(new ulong[]{0x0000000000010002UL});
+    public static readonly BitSet FOLLOW_ID_in_id566 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_21_in_id571 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_id573 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_id575 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RCON_in_command589 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_command592 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RCON_in_command609 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_command612 = new BitSet(new ulong[]{0x0000000000210000UL});
+    public static readonly BitSet FOLLOW_id_in_command614 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RCON_in_innerCommand639 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_innerCommand642 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_RCON_in_innerCommand659 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_innerCommand662 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_innerCommand664 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_META_in_guiRule697 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_firstGuiField_in_guiRule699 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_metaEnding_in_guiRule701 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_21_in_firstGuiField725 = new BitSet(new ulong[]{0x0000000000010000UL});
+    public static readonly BitSet FOLLOW_ID_in_firstGuiField729 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_firstGuiField731 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiFields_in_metaEnding760 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiFields_in_metaEnding768 = new BitSet(new ulong[]{0x00000000000187F0UL});
+    public static readonly BitSet FOLLOW_LINEBREAK_in_metaEnding770 = new BitSet(new ulong[]{0x00000000000187F0UL});
+    public static readonly BitSet FOLLOW_stat_in_metaEnding773 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiField_in_guiFields798 = new BitSet(new ulong[]{0x0000000000200002UL});
+    public static readonly BitSet FOLLOW_21_in_guiField812 = new BitSet(new ulong[]{0x0000000000030000UL});
+    public static readonly BitSet FOLLOW_metaElement_in_guiField814 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_guiField816 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INT_in_metaElement834 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ID_in_metaElement851 = new BitSet(new ulong[]{0x0000000000010002UL});
+    public static readonly BitSet FOLLOW_21_in_emptyQuotes875 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_emptyQuotes876 = new BitSet(new ulong[]{0x0000000000000002UL});
 
 }

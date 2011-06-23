@@ -55,8 +55,8 @@ namespace Installer.Model
 			CommonTreeNodeStream nodes = new CommonTreeNodeStream(t);
 			// tell it where it can find the token objects
 			nodes.TokenStream = tokens;
-			SourceRewrite rewriter = new SourceRewrite(nodes);
-			rewriter.prog(script);
+			//SourceRewrite rewriter = new SourceRewrite(nodes);
+			//rewriter.prog(script);
 			return tokens.ToString(); // return tweaked token buffer
 		}
 

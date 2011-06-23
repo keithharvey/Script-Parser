@@ -20,12 +20,12 @@ tokens {
 	METATEXT;
 }
  
- @header {
+@header {
 	using System.Collections.Generic;
 	using Installer.Model;
 	using System.Diagnostics;
 }
- @members 
+@members 
 {
 	Script _script;
 }
@@ -76,32 +76,37 @@ innerCommand
 	|	RCON? ID ID -> ^(COMMAND ID ID RCON?) 
 	;
 guiRule
-	:	META guiFields LINEBREAK* stat
-		-> 	^(META guiFields stat)
+scope { string metaType; }
+@init { $guiRule::metaType = String.Empty; }
+	:	META firstGuiField metaEnding
+		-> 	^(META firstGuiField metaEnding)
+	;
+
+firstGuiField
+	:	'"' id1=ID '"'{ $guiRule::metaType=$id1.text; Debug.WriteLine("Reached end of firstGuiField");}
+			{_script.SupportedMetaData[$id1.text].IsAValidField(0, $id1.text, true) }? 
+				-> ID
+	;
+
+metaEnding
+	:	{(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true)}?=>{Debug.WriteLine("meta ending reached, independent");}guiFields
+	|	{(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false)}?=>{Debug.WriteLine("meta ending reached, dependent");}guiFields LINEBREAK* stat
 	;
 
 guiFields
-scope { bool first; int n; string metaType; }
-@init { $guiFields::first = true; $guiFields::n = 0; }
-	// we want to find out what the first guiField is always to determine what type it is
-	// after that we make sure the current count is less than the number of fields allowed for that type
-	//  ( {if (first || n<NumberOfFields)} '"' guiField+ '"' {n++} )+
+scope { int n;  }
+@init { $guiFields::n = 1; }
+	// we make sure the current count is less than the number of fields allowed for that type
+	//  ( {if (n<NumberOfFields)} '"' guiField '"' {n++} )+
 	:	(guiField {$guiFields::n++;})+
 	;
-guiField:	identifyingMetaElement
-	|	{($guiFields::first==false && $guiFields::n < _script.SupportedMetaData[$guiFields::metaType].NumberOfMetaFields)}?=>('"' metaElement '"')+
-		-> metaElement+	
-	;
-identifyingMetaElement
-	:	({$guiFields::first}?=>'"' id1=ID '"'{ $guiFields::metaType=$id1.text; $guiFields::first = false; })
-			{_script.SupportedMetaData[$id1.text].IsAValidField($guiFields::n, $id1.text, $guiFields::first) }? 
-		-> ID 
+guiField:	{$guiFields::n < _script.SupportedMetaData[$guiRule::metaType].NumberOfMetaFields}?=>'"' metaElement '"'
+		-> metaElement
 	;
 metaElement
-	:	//if this particular field is an int then only allow one field
-		{_script.SupportedMetaData[$guiFields::metaType].FieldIsInt($guiFields::n)}?=>INT
+	:	{_script.SupportedMetaData[$guiRule::metaType].FieldIsInt($guiFields::n)}?=>INT
 		-> ^(METAINT INT)
-	|	{!_script.SupportedMetaData[$guiFields::metaType].FieldIsInt($guiFields::n)}?=>ID+
+	|	{!_script.SupportedMetaData[$guiRule::metaType].FieldIsInt($guiFields::n)}?=>ID+
 		-> ^(METATEXT ID+)
 	;
  emptyQuotes

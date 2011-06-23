@@ -20,6 +20,7 @@ namespace Installer.Model
 		string _sourcePath;
 		List<string> _files;
         List<IStatement> _content;
+        List<MetaData<IMeta>> _independentContent;
 
 		#endregion // Fields
 
@@ -55,9 +56,11 @@ namespace Installer.Model
         {
             get
             {
+                SourceMeta sourceMeta = new SourceMeta();
                 SourceMetaToggle sourceMetaToggle = new SourceMetaToggle();
                 return new Dictionary<string, IMeta>()
                 {
+                    { sourceMeta.Identifier, sourceMeta },
                     { sourceMetaToggle.Identifier, sourceMetaToggle }
                 };
             }
@@ -75,6 +78,21 @@ namespace Installer.Model
             set
             {
                 _content = value;
+            }
+        }
+
+        public List<MetaData<IMeta>> IndepedendentContent
+        {
+            get
+            {
+                if (_independentContent == null)
+                    _independentContent = new List<MetaData<IMeta>>();
+
+                return _independentContent;
+            }
+            set
+            {
+                _independentContent = value;
             }
         }
 

@@ -6,20 +6,20 @@ using System.Text;
 
 namespace Installer.Model
 {
-    public class SourceMetaToggle : IMeta
+    public class SourceMeta : IMeta
     {
         string[] _metaFields;
         /// <summary>
         /// "toggle" The identifier for this meta type
-        ///      ex. ///toggle metafields
+        ///      ex. ///info metafields
         /// </summary>
-        public string Identifier { get { return "toggle"; } }
+        public string Identifier { get { return "info"; } }
 
-        public int NumberOfMetaFields { get { return MetaFields.Length; } }
+        public int NumberOfMetaFields { get { return FieldArray.Length; } }
 
         /// <summary>
-        // Meta Fields defines the type of meta data that can be entered behind the "toggle" keyword in the script being parsed
-        //     toggle "state" "group_name" "description"
+        // Meta Fields defines the type of meta data that can be entered behind the "info" keyword in the script being parsed
+        //  "info" "name" "description"
         /// </summary>
         public string[] MetaFields
         {
@@ -47,7 +47,6 @@ namespace Installer.Model
                 {
                     typeof(string),
                     typeof(string),
-                    typeof(string),
                     typeof(string)
                 };
                 
@@ -66,6 +65,7 @@ namespace Installer.Model
                 return FieldArray[index] == typeof(string);
             }
         }
+
         public bool IsAValidField(int index, int field, bool first)
         {
             if (first)
@@ -77,18 +77,22 @@ namespace Installer.Model
                 return FieldArray[index] == typeof(string);
             }
         }
+
         public void AddMetaField(int index, int field)
         {
             throw new FormatException();
         }
+
         public void AddMetaField(int index, string newfield)
         {
             MetaFields[index] = newfield;
         }
+
         public bool FieldIsInt(int index)
         {
             return false;
         }
-        public bool IsIndependent { get { return false ; } }
+
+        public bool IsIndependent { get { return true; } }  
     }
 }

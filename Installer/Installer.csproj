@@ -160,6 +160,7 @@
     <Compile Include="Model\BLL\Alias.cs" />
     <Compile Include="Model\BLL\Bind.cs" />
     <Compile Include="Model\BLL\Command.cs" />
+    <Compile Include="Model\BLL\SourceMeta.cs" />
     <Compile Include="Model\BLL\Exec.cs" />
     <Compile Include="Model\BLL\IStatement.cs" />
     <Compile Include="Model\BLL\SourceMetaToggle.cs" />
@@ -167,7 +168,6 @@
     <Compile Include="Model\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
     <None Include="Model\BLL\KeyAlias.cs" />
-    <Compile Include="Model\DAL\SourceRewrite.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\BLL\Statement.cs" />
     <Compile Include="Model\BLL\Script.cs" />
@@ -233,8 +233,6 @@
     <None Include="Model\DAL\SourceEval.tokens" />
     <None Include="Model\DAL\SourceExpr.g" />
     <None Include="Model\DAL\SourceExpr.tokens" />
-    <None Include="Model\DAL\SourceRewrite.g" />
-    <None Include="Model\DAL\SourceRewrite.tokens" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

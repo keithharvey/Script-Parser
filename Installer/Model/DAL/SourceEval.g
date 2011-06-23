@@ -21,7 +21,7 @@ options {
 }
 prog [Script passedScriptInstance]
 @init { _script = passedScriptInstance; }
-	: 	(guiRule | stat {currentMetaData = null;})+
+	: 	(guiRule {if(_script.SupportedMetaData[$guiRule::metaType].IsIndependent) { _script.IndependentContent.Add(currentMetaData); currentMetaData = null; } } | stat {currentMetaData = null;})+
 	;
 
 stat
@@ -100,24 +100,33 @@ command returns [Command command]
 	;
 
 guiRule
-	:	^(META guiFields stat)
+scope { string metaType; }
+@init { $guiRule::metaType = String.Empty; }
+	:	^(META firstGuiField metaEnding)
 	;
 
+firstGuiField
+	:	id1=ID
+		{
+		$guiRule::metaType=$id1.text; 
+		currentMetaData = new MetaData<IMeta>(_script.SupportedMetaData[$guiRule::metaType]);
+		currentMetaData.MetaInfo.AddMetaField(0, $id1.text); 
+		}
+	;
+
+metaEnding
+	:	{_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true}?=>guiFields
+	|	{_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false}?=>guiFields LINEBREAK* stat
+	;
+	
 guiFields
-	scope { bool first; int n; string metaType; }
-	@init { $guiFields::first = true; $guiFields::n = 0; }
+	scope { int n; }
+	@init { $guiFields::n = 1; }
 	//  ( {if (first || n<NumberOfFields)} '"' guiField+ '"' {n++} )+
 	:	(guiField {$guiFields::n++;})+
 	;
 guiField
-	:	{$guiFields::first}?=>
-			id1=ID
-			{$guiFields::metaType=$id1.text; 
-			$guiFields::first = false;
-			currentMetaData = new MetaData<IMeta>(_script.SupportedMetaData[$guiFields::metaType]);
-			currentMetaData.MetaInfo.AddMetaField($guiFields::n, $id1.text); 
-			}
-	|	{$guiFields::first==false}?=>(metaElement{$guiFields::n++;} )+
+	:	(metaElement{$guiFields::n++;} )+
 	;
 
 metaElement
