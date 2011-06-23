@@ -21,7 +21,7 @@ options {
 }
 prog [Script passedScriptInstance]
 @init { _script = passedScriptInstance; }
-	: 	(guiRule {if(_script.SupportedMetaData[$guiRule::metaType].IsIndependent) { _script.IndependentContent.Add(currentMetaData); currentMetaData = null; } } | stat {currentMetaData = null;})+
+	: 	(guiRule {if(_script.SupportedMetaData[currentMetaData.MetaInfo.Identifier].IsIndependent) { _script.IndependentContent.Add(currentMetaData); currentMetaData = null; } } | stat {currentMetaData = null;})+
 	;
 
 stat
@@ -115,8 +115,8 @@ firstGuiField
 	;
 
 metaEnding
-	:	{_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true}?=>guiFields
-	|	{_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false}?=>guiFields LINEBREAK* stat
+	:	{_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true}?=> guiFields
+	|	{_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false}?=> guiFields LINEBREAK* stat
 	;
 	
 guiFields

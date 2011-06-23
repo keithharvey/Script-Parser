@@ -83,14 +83,15 @@ scope { string metaType; }
 	;
 
 firstGuiField
-	:	'"' id1=ID '"'{ $guiRule::metaType=$id1.text; Debug.WriteLine("Reached end of firstGuiField");}
+	:	'"' id1=ID '"'{ $guiRule::metaType=$id1.text; }
 			{_script.SupportedMetaData[$id1.text].IsAValidField(0, $id1.text, true) }? 
 				-> ID
 	;
 
 metaEnding
-	:	{(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true)}?=>{Debug.WriteLine("meta ending reached, independent");}guiFields
-	|	{(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false)}?=>{Debug.WriteLine("meta ending reached, dependent");}guiFields LINEBREAK* stat
+		// don't ask me why I have the erroneous {} in there. ANTLR bug.
+	:	{_script.SupportedMetaData[$guiRule::metaType].IsIndependent}?=> {} guiFields
+	|	{!_script.SupportedMetaData[$guiRule::metaType].IsIndependent}?=> {} guiFields LINEBREAK* stat
 	;
 
 guiFields

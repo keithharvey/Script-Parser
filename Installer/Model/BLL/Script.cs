@@ -81,7 +81,7 @@ namespace Installer.Model
             }
         }
 
-        public List<MetaData<IMeta>> IndepedendentContent
+        public List<MetaData<IMeta>> IndependentContent
         {
             get
             {

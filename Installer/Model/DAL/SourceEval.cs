@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g 2011-06-22 21:17:41
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g 2011-06-23 02:51:15
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -133,12 +133,12 @@ public partial class SourceEval : TreeParser
             			    	guiRule();
             			    	state.followingStackPointer--;
 
-                                if (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent) { _script.IndepedendentContent.Add(currentMetaData); currentMetaData = null; } 
+            			    	if(_script.SupportedMetaData[currentMetaData.MetaInfo.Identifier].IsIndependent) { _script.IndependentContent.Add(currentMetaData); currentMetaData = null; } 
 
             			    }
             			    break;
             			case 2 :
-            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:24:160: stat
+            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:24:177: stat
             			    {
             			    	PushFollow(FOLLOW_stat_in_prog72);
             			    	stat();
@@ -1299,7 +1299,7 @@ public partial class SourceEval : TreeParser
                     	{
                     	    throw new FailedPredicateException(input, "metaEnding", "_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true");
                     	}
-                    	PushFollow(FOLLOW_guiFields_in_metaEnding605);
+                    	PushFollow(FOLLOW_guiFields_in_metaEnding606);
                     	guiFields();
                     	state.followingStackPointer--;
 
@@ -1313,11 +1313,11 @@ public partial class SourceEval : TreeParser
                     	{
                     	    throw new FailedPredicateException(input, "metaEnding", "_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false");
                     	}
-                    	PushFollow(FOLLOW_guiFields_in_metaEnding612);
+                    	PushFollow(FOLLOW_guiFields_in_metaEnding614);
                     	guiFields();
                     	state.followingStackPointer--;
 
-                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:119:87: ( LINEBREAK )*
+                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:119:88: ( LINEBREAK )*
                     	do 
                     	{
                     	    int alt12 = 2;
@@ -1332,9 +1332,9 @@ public partial class SourceEval : TreeParser
                     	    switch (alt12) 
                     		{
                     			case 1 :
-                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:119:87: LINEBREAK
+                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:119:88: LINEBREAK
                     			    {
-                    			    	Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_metaEnding614); 
+                    			    	Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_metaEnding616); 
 
                     			    }
                     			    break;
@@ -1347,7 +1347,7 @@ public partial class SourceEval : TreeParser
                     	loop12:
                     		;	// Stops C# compiler whining that label 'loop12' has no statements
 
-                    	PushFollow(FOLLOW_stat_in_metaEnding617);
+                    	PushFollow(FOLLOW_stat_in_metaEnding619);
                     	stat();
                     	state.followingStackPointer--;
 
@@ -1405,7 +1405,7 @@ public partial class SourceEval : TreeParser
             			case 1 :
             			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:126:5: guiField
             			    {
-            			    	PushFollow(FOLLOW_guiField_in_guiFields643);
+            			    	PushFollow(FOLLOW_guiField_in_guiFields645);
             			    	guiField();
             			    	state.followingStackPointer--;
 
@@ -1475,7 +1475,7 @@ public partial class SourceEval : TreeParser
             			case 1 :
             			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:129:5: metaElement
             			    {
-            			    	PushFollow(FOLLOW_metaElement_in_guiField658);
+            			    	PushFollow(FOLLOW_metaElement_in_guiField660);
             			    	metaElement();
             			    	state.followingStackPointer--;
 
@@ -1546,10 +1546,10 @@ public partial class SourceEval : TreeParser
                 case 1 :
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:133:4: ^( METAINT int1= INT )
                     {
-                    	Match(input,METAINT,FOLLOW_METAINT_in_metaElement674); 
+                    	Match(input,METAINT,FOLLOW_METAINT_in_metaElement676); 
 
                     	Match(input, Token.DOWN, null); 
-                    	int1=(CommonTree)Match(input,INT,FOLLOW_INT_in_metaElement678); 
+                    	int1=(CommonTree)Match(input,INT,FOLLOW_INT_in_metaElement680); 
 
                     	Match(input, Token.UP, null); 
                     	currentMetaData.MetaInfo.AddMetaField(((guiFields_scope)guiFields_stack.Peek()).n, (int1!=null?int.Parse(int1.Text):0)); 
@@ -1560,7 +1560,7 @@ public partial class SourceEval : TreeParser
                     // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:134:4: ^( METATEXT (id1= ID )+ )
                     {
                     	string metaText = String.Empty;
-                    	Match(input,METATEXT,FOLLOW_METATEXT_in_metaElement691); 
+                    	Match(input,METATEXT,FOLLOW_METATEXT_in_metaElement693); 
 
                     	Match(input, Token.DOWN, null); 
                     	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:135:14: (id1= ID )+
@@ -1581,7 +1581,7 @@ public partial class SourceEval : TreeParser
                     			case 1 :
                     			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceEval.g:135:15: id1= ID
                     			    {
-                    			    	id1=(CommonTree)Match(input,ID,FOLLOW_ID_in_metaElement696); 
+                    			    	id1=(CommonTree)Match(input,ID,FOLLOW_ID_in_metaElement698); 
                     			    	metaText+=" " + id1;
 
                     			    }
@@ -2025,15 +2025,15 @@ public partial class SourceEval : TreeParser
     public static readonly BitSet FOLLOW_firstGuiField_in_guiRule572 = new BitSet(new ulong[]{0x0000000000006000UL});
     public static readonly BitSet FOLLOW_metaEnding_in_guiRule574 = new BitSet(new ulong[]{0x0000000000000008UL});
     public static readonly BitSet FOLLOW_ID_in_firstGuiField588 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_guiFields_in_metaEnding605 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_guiFields_in_metaEnding612 = new BitSet(new ulong[]{0x0000000000009F70UL});
-    public static readonly BitSet FOLLOW_LINEBREAK_in_metaEnding614 = new BitSet(new ulong[]{0x0000000000009F70UL});
-    public static readonly BitSet FOLLOW_stat_in_metaEnding617 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_guiField_in_guiFields643 = new BitSet(new ulong[]{0x0000000000006002UL});
-    public static readonly BitSet FOLLOW_metaElement_in_guiField658 = new BitSet(new ulong[]{0x0000000000006002UL});
-    public static readonly BitSet FOLLOW_METAINT_in_metaElement674 = new BitSet(new ulong[]{0x0000000000000004UL});
-    public static readonly BitSet FOLLOW_INT_in_metaElement678 = new BitSet(new ulong[]{0x0000000000000008UL});
-    public static readonly BitSet FOLLOW_METATEXT_in_metaElement691 = new BitSet(new ulong[]{0x0000000000000004UL});
-    public static readonly BitSet FOLLOW_ID_in_metaElement696 = new BitSet(new ulong[]{0x0000000000010008UL});
+    public static readonly BitSet FOLLOW_guiFields_in_metaEnding606 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiFields_in_metaEnding614 = new BitSet(new ulong[]{0x0000000000009F70UL});
+    public static readonly BitSet FOLLOW_LINEBREAK_in_metaEnding616 = new BitSet(new ulong[]{0x0000000000009F70UL});
+    public static readonly BitSet FOLLOW_stat_in_metaEnding619 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiField_in_guiFields645 = new BitSet(new ulong[]{0x0000000000006002UL});
+    public static readonly BitSet FOLLOW_metaElement_in_guiField660 = new BitSet(new ulong[]{0x0000000000006002UL});
+    public static readonly BitSet FOLLOW_METAINT_in_metaElement676 = new BitSet(new ulong[]{0x0000000000000004UL});
+    public static readonly BitSet FOLLOW_INT_in_metaElement680 = new BitSet(new ulong[]{0x0000000000000008UL});
+    public static readonly BitSet FOLLOW_METATEXT_in_metaElement693 = new BitSet(new ulong[]{0x0000000000000004UL});
+    public static readonly BitSet FOLLOW_ID_in_metaElement698 = new BitSet(new ulong[]{0x0000000000010008UL});
 
 }

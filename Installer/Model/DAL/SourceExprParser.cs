@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g 2011-06-23 01:54:01
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g 2011-06-23 02:47:43
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -404,7 +404,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          multExpr, id, ALIAS
+                    	// elements:          ALIAS, id, multExpr
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -569,7 +569,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          BIND, id, multExpr
+                    	// elements:          BIND, multExpr, id
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -616,7 +616,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          id, command, BIND
+                    	// elements:          BIND, id, command
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -749,7 +749,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          EXEC, ID, RCON
+                    	// elements:          EXEC, RCON, ID
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -817,7 +817,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          ID, EXEC, RCON
+                    	// elements:          RCON, ID, EXEC
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -893,7 +893,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          id, id, INCREMENT, id, id
+                    	// elements:          id, id, id, id, INCREMENT
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1415,7 +1415,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          innerCommand, ID, ALIAS
+                    	// elements:          ID, ALIAS, innerCommand
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1485,7 +1485,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          ID, ID, BIND
+                    	// elements:          BIND, ID, ID
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1553,7 +1553,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          INCREMENT, ID, ID, ID, ID
+                    	// elements:          ID, ID, ID, INCREMENT, ID
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -1617,7 +1617,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          EXEC, ID
+                    	// elements:          ID, EXEC
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -2109,7 +2109,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          ID, id, RCON
+                    	// elements:          id, ID, RCON
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -2297,7 +2297,7 @@ public partial class SourceExprParser : Parser
 
 
                     	// AST REWRITE
-                    	// elements:          RCON, ID
+                    	// elements:          ID, RCON
                     	// token labels:      
                     	// rule labels:       retval
                     	// token list labels: 
@@ -2572,7 +2572,7 @@ public partial class SourceExprParser : Parser
             	char_literal92=(IToken)Match(input,21,FOLLOW_21_in_firstGuiField731);  
             	stream_21.Add(char_literal92);
 
-            	 ((guiRule_scope)guiRule_stack.Peek()).metaType = ((id1 != null) ? id1.Text : null); Debug.WriteLine("Reached end of firstGuiField");
+            	 ((guiRule_scope)guiRule_stack.Peek()).metaType = ((id1 != null) ? id1.Text : null); 
             	if ( !((_script.SupportedMetaData[((id1 != null) ? id1.Text : null)].IsAValidField(0, ((id1 != null) ? id1.Text : null), true) )) ) 
             	{
             	    throw new FailedPredicateException(input, "firstGuiField", "_script.SupportedMetaData[$id1.text].IsAValidField(0, $id1.text, true) ");
@@ -2650,22 +2650,22 @@ public partial class SourceExprParser : Parser
 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:92:2: ({...}? => guiFields | {...}? => guiFields ( LINEBREAK )* stat )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:2: ({...}? => guiFields | {...}? => guiFields ( LINEBREAK )* stat )
             int alt24 = 2;
             alt24 = dfa24.Predict(input);
             switch (alt24) 
             {
                 case 1 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:92:4: {...}? => guiFields
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:4: {...}? => guiFields
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
 
-                    	if ( !(((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) 
+                    	if ( !((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) 
                     	{
-                    	    throw new FailedPredicateException(input, "metaEnding", "(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == true)");
+                    	    throw new FailedPredicateException(input, "metaEnding", "_script.SupportedMetaData[$guiRule::metaType].IsIndependent");
                     	}
-                    	Debug.WriteLine("meta ending reached, independent");
-                    	PushFollow(FOLLOW_guiFields_in_metaEnding760);
+
+                    	PushFollow(FOLLOW_guiFields_in_metaEnding765);
                     	guiFields93 = guiFields();
                     	state.followingStackPointer--;
 
@@ -2674,21 +2674,21 @@ public partial class SourceExprParser : Parser
                     }
                     break;
                 case 2 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:4: {...}? => guiFields ( LINEBREAK )* stat
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:94:4: {...}? => guiFields ( LINEBREAK )* stat
                     {
                     	root_0 = (CommonTree)adaptor.GetNilNode();
 
-                    	if ( !(((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) 
+                    	if ( !((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) 
                     	{
-                    	    throw new FailedPredicateException(input, "metaEnding", "(_script.SupportedMetaData[$guiRule::metaType].IsIndependent == false)");
+                    	    throw new FailedPredicateException(input, "metaEnding", "!_script.SupportedMetaData[$guiRule::metaType].IsIndependent");
                     	}
-                    	Debug.WriteLine("meta ending reached, dependent");
-                    	PushFollow(FOLLOW_guiFields_in_metaEnding768);
+
+                    	PushFollow(FOLLOW_guiFields_in_metaEnding775);
                     	guiFields94 = guiFields();
                     	state.followingStackPointer--;
 
                     	adaptor.AddChild(root_0, guiFields94.Tree);
-                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:141: ( LINEBREAK )*
+                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:94:83: ( LINEBREAK )*
                     	do 
                     	{
                     	    int alt23 = 2;
@@ -2703,9 +2703,9 @@ public partial class SourceExprParser : Parser
                     	    switch (alt23) 
                     		{
                     			case 1 :
-                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:93:141: LINEBREAK
+                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:94:83: LINEBREAK
                     			    {
-                    			    	LINEBREAK95=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_metaEnding770); 
+                    			    	LINEBREAK95=(IToken)Match(input,LINEBREAK,FOLLOW_LINEBREAK_in_metaEnding777); 
                     			    		LINEBREAK95_tree = (CommonTree)adaptor.Create(LINEBREAK95);
                     			    		adaptor.AddChild(root_0, LINEBREAK95_tree);
 
@@ -2721,7 +2721,7 @@ public partial class SourceExprParser : Parser
                     	loop23:
                     		;	// Stops C# compiler whining that label 'loop23' has no statements
 
-                    	PushFollow(FOLLOW_stat_in_metaEnding773);
+                    	PushFollow(FOLLOW_stat_in_metaEnding780);
                     	stat96 = stat();
                     	state.followingStackPointer--;
 
@@ -2768,7 +2768,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "guiFields"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:96:1: guiFields : ( guiField )+ ;
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:97:1: guiFields : ( guiField )+ ;
     public SourceExprParser.guiFields_return guiFields() // throws RecognitionException [1]
     {   
         guiFields_stack.Push(new guiFields_scope());
@@ -2784,12 +2784,12 @@ public partial class SourceExprParser : Parser
          ((guiFields_scope)guiFields_stack.Peek()).n =  1; 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:2: ( ( guiField )+ )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:4: ( guiField )+
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:102:2: ( ( guiField )+ )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:102:4: ( guiField )+
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:4: ( guiField )+
+            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:102:4: ( guiField )+
             	int cnt25 = 0;
             	do 
             	{
@@ -2805,9 +2805,9 @@ public partial class SourceExprParser : Parser
             	    switch (alt25) 
             		{
             			case 1 :
-            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:101:5: guiField
+            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:102:5: guiField
             			    {
-            			    	PushFollow(FOLLOW_guiField_in_guiFields798);
+            			    	PushFollow(FOLLOW_guiField_in_guiFields805);
             			    	guiField97 = guiField();
             			    	state.followingStackPointer--;
 
@@ -2864,7 +2864,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "guiField"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:103:1: guiField : {...}? => '\"' metaElement '\"' -> metaElement ;
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:104:1: guiField : {...}? => '\"' metaElement '\"' -> metaElement ;
     public SourceExprParser.guiField_return guiField() // throws RecognitionException [1]
     {   
         SourceExprParser.guiField_return retval = new SourceExprParser.guiField_return();
@@ -2883,22 +2883,22 @@ public partial class SourceExprParser : Parser
         RewriteRuleSubtreeStream stream_metaElement = new RewriteRuleSubtreeStream(adaptor,"rule metaElement");
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:103:9: ({...}? => '\"' metaElement '\"' -> metaElement )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:103:11: {...}? => '\"' metaElement '\"'
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:104:9: ({...}? => '\"' metaElement '\"' -> metaElement )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:104:11: {...}? => '\"' metaElement '\"'
             {
             	if ( !((((guiFields_scope)guiFields_stack.Peek()).n < _script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].NumberOfMetaFields)) ) 
             	{
             	    throw new FailedPredicateException(input, "guiField", "$guiFields::n < _script.SupportedMetaData[$guiRule::metaType].NumberOfMetaFields");
             	}
-            	char_literal98=(IToken)Match(input,21,FOLLOW_21_in_guiField812);  
+            	char_literal98=(IToken)Match(input,21,FOLLOW_21_in_guiField819);  
             	stream_21.Add(char_literal98);
 
-            	PushFollow(FOLLOW_metaElement_in_guiField814);
+            	PushFollow(FOLLOW_metaElement_in_guiField821);
             	metaElement99 = metaElement();
             	state.followingStackPointer--;
 
             	stream_metaElement.Add(metaElement99.Tree);
-            	char_literal100=(IToken)Match(input,21,FOLLOW_21_in_guiField816);  
+            	char_literal100=(IToken)Match(input,21,FOLLOW_21_in_guiField823);  
             	stream_21.Add(char_literal100);
 
 
@@ -2914,7 +2914,7 @@ public partial class SourceExprParser : Parser
             	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
 
             	root_0 = (CommonTree)adaptor.GetNilNode();
-            	// 104:3: -> metaElement
+            	// 105:3: -> metaElement
             	{
             	    adaptor.AddChild(root_0, stream_metaElement.NextTree());
 
@@ -2954,7 +2954,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "metaElement"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:106:1: metaElement : ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) );
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:107:1: metaElement : ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) );
     public SourceExprParser.metaElement_return metaElement() // throws RecognitionException [1]
     {   
         SourceExprParser.metaElement_return retval = new SourceExprParser.metaElement_return();
@@ -2972,7 +2972,7 @@ public partial class SourceExprParser : Parser
 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:107:2: ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:108:2: ({...}? => INT -> ^( METAINT INT ) | {...}? => ( ID )+ -> ^( METATEXT ( ID )+ ) )
             int alt27 = 2;
             int LA27_0 = input.LA(1);
 
@@ -2994,13 +2994,13 @@ public partial class SourceExprParser : Parser
             switch (alt27) 
             {
                 case 1 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:107:4: {...}? => INT
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:108:4: {...}? => INT
                     {
                     	if ( !((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) ) 
                     	{
                     	    throw new FailedPredicateException(input, "metaElement", "_script.SupportedMetaData[$guiRule::metaType].FieldIsInt($guiFields::n)");
                     	}
-                    	INT101=(IToken)Match(input,INT,FOLLOW_INT_in_metaElement834);  
+                    	INT101=(IToken)Match(input,INT,FOLLOW_INT_in_metaElement841);  
                     	stream_INT.Add(INT101);
 
 
@@ -3016,9 +3016,9 @@ public partial class SourceExprParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
 
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 108:3: -> ^( METAINT INT )
+                    	// 109:3: -> ^( METAINT INT )
                     	{
-                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:108:6: ^( METAINT INT )
+                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:109:6: ^( METAINT INT )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(METAINT, "METAINT"), root_1);
@@ -3034,13 +3034,13 @@ public partial class SourceExprParser : Parser
                     }
                     break;
                 case 2 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:109:4: {...}? => ( ID )+
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:110:4: {...}? => ( ID )+
                     {
                     	if ( !((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].FieldIsInt(((guiFields_scope)guiFields_stack.Peek()).n))) ) 
                     	{
                     	    throw new FailedPredicateException(input, "metaElement", "!_script.SupportedMetaData[$guiRule::metaType].FieldIsInt($guiFields::n)");
                     	}
-                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:109:81: ( ID )+
+                    	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:110:81: ( ID )+
                     	int cnt26 = 0;
                     	do 
                     	{
@@ -3056,9 +3056,9 @@ public partial class SourceExprParser : Parser
                     	    switch (alt26) 
                     		{
                     			case 1 :
-                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:109:81: ID
+                    			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:110:81: ID
                     			    {
-                    			    	ID102=(IToken)Match(input,ID,FOLLOW_ID_in_metaElement851);  
+                    			    	ID102=(IToken)Match(input,ID,FOLLOW_ID_in_metaElement858);  
                     			    	stream_ID.Add(ID102);
 
 
@@ -3090,9 +3090,9 @@ public partial class SourceExprParser : Parser
                     	RewriteRuleSubtreeStream stream_retval = new RewriteRuleSubtreeStream(adaptor, "rule retval", retval!=null ? retval.Tree : null);
 
                     	root_0 = (CommonTree)adaptor.GetNilNode();
-                    	// 110:3: -> ^( METATEXT ( ID )+ )
+                    	// 111:3: -> ^( METATEXT ( ID )+ )
                     	{
-                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:110:6: ^( METATEXT ( ID )+ )
+                    	    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:111:6: ^( METATEXT ( ID )+ )
                     	    {
                     	    CommonTree root_1 = (CommonTree)adaptor.GetNilNode();
                     	    root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(METATEXT, "METATEXT"), root_1);
@@ -3148,7 +3148,7 @@ public partial class SourceExprParser : Parser
     };
 
     // $ANTLR start "emptyQuotes"
-    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:112:2: emptyQuotes : '\"' '\"' ;
+    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:113:2: emptyQuotes : '\"' '\"' ;
     public SourceExprParser.emptyQuotes_return emptyQuotes() // throws RecognitionException [1]
     {   
         SourceExprParser.emptyQuotes_return retval = new SourceExprParser.emptyQuotes_return();
@@ -3164,16 +3164,16 @@ public partial class SourceExprParser : Parser
 
         try 
     	{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:113:3: ( '\"' '\"' )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:113:5: '\"' '\"'
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:114:3: ( '\"' '\"' )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:114:5: '\"' '\"'
             {
             	root_0 = (CommonTree)adaptor.GetNilNode();
 
-            	char_literal103=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes875); 
+            	char_literal103=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes882); 
             		char_literal103_tree = (CommonTree)adaptor.Create(char_literal103);
             		adaptor.AddChild(root_0, char_literal103_tree);
 
-            	char_literal104=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes876); 
+            	char_literal104=(IToken)Match(input,21,FOLLOW_21_in_emptyQuotes883); 
             		char_literal104_tree = (CommonTree)adaptor.Create(char_literal104);
             		adaptor.AddChild(root_0, char_literal104_tree);
 
@@ -3434,9 +3434,9 @@ public partial class SourceExprParser : Parser
                    	int index24_6 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_6 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 15; }
+                   	if ( (LA24_6 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 15; }
 
-                   	else if ( (LA24_6 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 16; }
+                   	else if ( (LA24_6 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 16; }
 
                    	 
                    	input.Seek(index24_6);
@@ -3449,9 +3449,9 @@ public partial class SourceExprParser : Parser
                    	int index24_37 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_37);
@@ -3464,9 +3464,9 @@ public partial class SourceExprParser : Parser
                    	int index24_1 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_1 == INT) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 2; }
+                   	if ( (LA24_1 == INT) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 2; }
 
-                   	else if ( (LA24_1 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 3; }
+                   	else if ( (LA24_1 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 3; }
 
                    	 
                    	input.Seek(index24_1);
@@ -3479,9 +3479,9 @@ public partial class SourceExprParser : Parser
                    	int index24_39 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_39);
@@ -3494,9 +3494,9 @@ public partial class SourceExprParser : Parser
                    	int index24_25 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_25);
@@ -3509,9 +3509,9 @@ public partial class SourceExprParser : Parser
                    	int index24_11 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_11 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 22; }
+                   	if ( (LA24_11 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 22; }
 
-                   	else if ( (LA24_11 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 23; }
+                   	else if ( (LA24_11 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 23; }
 
                    	 
                    	input.Seek(index24_11);
@@ -3524,7 +3524,7 @@ public partial class SourceExprParser : Parser
                    	int index24_2 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_2 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 4; }
+                   	if ( (LA24_2 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 4; }
 
                    	 
                    	input.Seek(index24_2);
@@ -3537,9 +3537,9 @@ public partial class SourceExprParser : Parser
                    	int index24_3 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_3 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 4; }
+                   	if ( (LA24_3 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 4; }
 
-                   	else if ( (LA24_3 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 3; }
+                   	else if ( (LA24_3 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 3; }
 
                    	 
                    	input.Seek(index24_3);
@@ -3552,9 +3552,9 @@ public partial class SourceExprParser : Parser
                    	int index24_35 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_35);
@@ -3567,9 +3567,9 @@ public partial class SourceExprParser : Parser
                    	int index24_17 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_17);
@@ -3582,9 +3582,9 @@ public partial class SourceExprParser : Parser
                    	int index24_45 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_45);
@@ -3597,9 +3597,9 @@ public partial class SourceExprParser : Parser
                    	int index24_51 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_51);
@@ -3612,7 +3612,7 @@ public partial class SourceExprParser : Parser
                    	int index24_0 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_0 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 1; }
+                   	if ( (LA24_0 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 1; }
 
                    	 
                    	input.Seek(index24_0);
@@ -3625,9 +3625,9 @@ public partial class SourceExprParser : Parser
                    	int index24_22 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_22 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 31; }
+                   	if ( (LA24_22 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 31; }
 
-                   	else if ( (LA24_22 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 32; }
+                   	else if ( (LA24_22 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 32; }
 
                    	 
                    	input.Seek(index24_22);
@@ -3640,9 +3640,9 @@ public partial class SourceExprParser : Parser
                    	int index24_15 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_15);
@@ -3655,9 +3655,9 @@ public partial class SourceExprParser : Parser
                    	int index24_41 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_41 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 45; }
+                   	if ( (LA24_41 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 45; }
 
-                   	else if ( (LA24_41 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 46; }
+                   	else if ( (LA24_41 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 46; }
 
                    	 
                    	input.Seek(index24_41);
@@ -3670,9 +3670,9 @@ public partial class SourceExprParser : Parser
                    	int index24_44 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_44 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 31; }
+                   	if ( (LA24_44 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 31; }
 
-                   	else if ( (LA24_44 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 32; }
+                   	else if ( (LA24_44 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 32; }
 
                    	 
                    	input.Seek(index24_44);
@@ -3685,7 +3685,7 @@ public partial class SourceExprParser : Parser
                    	int index24_28 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_28 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 38; }
+                   	if ( (LA24_28 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 38; }
 
                    	 
                    	input.Seek(index24_28);
@@ -3698,7 +3698,7 @@ public partial class SourceExprParser : Parser
                    	int index24_29 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_29 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 39; }
+                   	if ( (LA24_29 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 39; }
 
                    	 
                    	input.Seek(index24_29);
@@ -3711,9 +3711,9 @@ public partial class SourceExprParser : Parser
                    	int index24_31 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_31 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 41; }
+                   	if ( (LA24_31 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 41; }
 
-                   	else if ( (LA24_31 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 42; }
+                   	else if ( (LA24_31 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 42; }
 
                    	 
                    	input.Seek(index24_31);
@@ -3726,9 +3726,9 @@ public partial class SourceExprParser : Parser
                    	int index24_13 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_13 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 26; }
+                   	if ( (LA24_13 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 26; }
 
-                   	else if ( (LA24_13 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 27; }
+                   	else if ( (LA24_13 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 27; }
 
                    	 
                    	input.Seek(index24_13);
@@ -3741,9 +3741,9 @@ public partial class SourceExprParser : Parser
                    	int index24_8 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_8 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 10; }
+                   	if ( (LA24_8 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 10; }
 
-                   	else if ( (LA24_8 == EXEC) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 9; }
+                   	else if ( (LA24_8 == EXEC) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 9; }
 
                    	 
                    	input.Seek(index24_8);
@@ -3756,9 +3756,9 @@ public partial class SourceExprParser : Parser
                    	int index24_26 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_26 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 36; }
+                   	if ( (LA24_26 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 36; }
 
-                   	else if ( (LA24_26 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 37; }
+                   	else if ( (LA24_26 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 37; }
 
                    	 
                    	input.Seek(index24_26);
@@ -3771,7 +3771,7 @@ public partial class SourceExprParser : Parser
                    	int index24_18 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_18 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 29; }
+                   	if ( (LA24_18 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 29; }
 
                    	 
                    	input.Seek(index24_18);
@@ -3784,7 +3784,7 @@ public partial class SourceExprParser : Parser
                    	int index24_16 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_16 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 28; }
+                   	if ( (LA24_16 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 28; }
 
                    	 
                    	input.Seek(index24_16);
@@ -3797,9 +3797,9 @@ public partial class SourceExprParser : Parser
                    	int index24_48 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_48 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 41; }
+                   	if ( (LA24_48 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 41; }
 
-                   	else if ( (LA24_48 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 42; }
+                   	else if ( (LA24_48 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 42; }
 
                    	 
                    	input.Seek(index24_48);
@@ -3812,7 +3812,7 @@ public partial class SourceExprParser : Parser
                    	int index24_49 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_49 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 51; }
+                   	if ( (LA24_49 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 51; }
 
                    	 
                    	input.Seek(index24_49);
@@ -3825,7 +3825,7 @@ public partial class SourceExprParser : Parser
                    	int index24_33 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_33 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 44; }
+                   	if ( (LA24_33 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 44; }
 
                    	 
                    	input.Seek(index24_33);
@@ -3838,7 +3838,7 @@ public partial class SourceExprParser : Parser
                    	int index24_43 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_43 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 48; }
+                   	if ( (LA24_43 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 48; }
 
                    	 
                    	input.Seek(index24_43);
@@ -3851,7 +3851,7 @@ public partial class SourceExprParser : Parser
                    	int index24_47 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_47 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 50; }
+                   	if ( (LA24_47 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 50; }
 
                    	 
                    	input.Seek(index24_47);
@@ -3864,7 +3864,7 @@ public partial class SourceExprParser : Parser
                    	int index24_23 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_23 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 33; }
+                   	if ( (LA24_23 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 33; }
 
                    	 
                    	input.Seek(index24_23);
@@ -3877,7 +3877,7 @@ public partial class SourceExprParser : Parser
                    	int index24_32 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_32 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 43; }
+                   	if ( (LA24_32 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 43; }
 
                    	 
                    	input.Seek(index24_32);
@@ -3890,7 +3890,7 @@ public partial class SourceExprParser : Parser
                    	int index24_42 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_42 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 47; }
+                   	if ( (LA24_42 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 47; }
 
                    	 
                    	input.Seek(index24_42);
@@ -3903,7 +3903,7 @@ public partial class SourceExprParser : Parser
                    	int index24_46 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_46 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 49; }
+                   	if ( (LA24_46 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 49; }
 
                    	 
                    	input.Seek(index24_46);
@@ -3916,9 +3916,9 @@ public partial class SourceExprParser : Parser
                    	int index24_7 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_7 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 17; }
+                   	if ( (LA24_7 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 17; }
 
-                   	else if ( (LA24_7 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 18; }
+                   	else if ( (LA24_7 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 18; }
 
                    	 
                    	input.Seek(index24_7);
@@ -3931,25 +3931,25 @@ public partial class SourceExprParser : Parser
                    	int index24_14 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_14 == EOF || LA24_14 == META) && (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( (LA24_14 == EOF || LA24_14 == META) && ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (LA24_14 == ALIAS) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 6; }
+                   	else if ( (LA24_14 == ALIAS) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 6; }
 
-                   	else if ( (LA24_14 == BIND) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 7; }
+                   	else if ( (LA24_14 == BIND) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 7; }
 
-                   	else if ( (LA24_14 == RCON) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 8; }
+                   	else if ( (LA24_14 == RCON) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 8; }
 
-                   	else if ( (LA24_14 == EXEC) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 9; }
+                   	else if ( (LA24_14 == EXEC) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 9; }
 
-                   	else if ( (LA24_14 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 10; }
+                   	else if ( (LA24_14 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 10; }
 
-                   	else if ( (LA24_14 == INCREMENT) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 11; }
+                   	else if ( (LA24_14 == INCREMENT) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 11; }
 
-                   	else if ( (LA24_14 == ECHO) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 12; }
+                   	else if ( (LA24_14 == ECHO) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 12; }
 
-                   	else if ( (LA24_14 == SAY) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 13; }
+                   	else if ( (LA24_14 == SAY) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 13; }
 
-                   	else if ( (LA24_14 == LINEBREAK) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 14; }
+                   	else if ( (LA24_14 == LINEBREAK) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 14; }
 
                    	 
                    	input.Seek(index24_14);
@@ -3962,9 +3962,9 @@ public partial class SourceExprParser : Parser
                    	int index24_9 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_9 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 19; }
+                   	if ( (LA24_9 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 19; }
 
-                   	else if ( (LA24_9 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 20; }
+                   	else if ( (LA24_9 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 20; }
 
                    	 
                    	input.Seek(index24_9);
@@ -3977,9 +3977,9 @@ public partial class SourceExprParser : Parser
                    	int index24_38 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_38);
@@ -3992,9 +3992,9 @@ public partial class SourceExprParser : Parser
                    	int index24_20 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_20);
@@ -4007,7 +4007,7 @@ public partial class SourceExprParser : Parser
                    	int index24_30 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_30 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 40; }
+                   	if ( (LA24_30 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 40; }
 
                    	 
                    	input.Seek(index24_30);
@@ -4020,7 +4020,7 @@ public partial class SourceExprParser : Parser
                    	int index24_19 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_19 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 30; }
+                   	if ( (LA24_19 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 30; }
 
                    	 
                    	input.Seek(index24_19);
@@ -4033,9 +4033,9 @@ public partial class SourceExprParser : Parser
                    	int index24_34 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_34 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 35; }
+                   	if ( (LA24_34 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 35; }
 
-                   	else if ( (LA24_34 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 34; }
+                   	else if ( (LA24_34 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 34; }
 
                    	 
                    	input.Seek(index24_34);
@@ -4048,9 +4048,9 @@ public partial class SourceExprParser : Parser
                    	int index24_10 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_10);
@@ -4063,9 +4063,9 @@ public partial class SourceExprParser : Parser
                    	int index24_36 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_36 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 37; }
+                   	if ( (LA24_36 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 37; }
 
-                   	else if ( (LA24_36 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 36; }
+                   	else if ( (LA24_36 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 36; }
 
                    	 
                    	input.Seek(index24_36);
@@ -4078,27 +4078,27 @@ public partial class SourceExprParser : Parser
                    	int index24_4 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_4 == EOF || LA24_4 == META) && (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( (LA24_4 == EOF || LA24_4 == META) && ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (LA24_4 == ALIAS) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 6; }
+                   	else if ( (LA24_4 == ALIAS) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 6; }
 
-                   	else if ( (LA24_4 == BIND) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 7; }
+                   	else if ( (LA24_4 == BIND) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 7; }
 
-                   	else if ( (LA24_4 == RCON) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 8; }
+                   	else if ( (LA24_4 == RCON) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 8; }
 
-                   	else if ( (LA24_4 == EXEC) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 9; }
+                   	else if ( (LA24_4 == EXEC) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 9; }
 
-                   	else if ( (LA24_4 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 10; }
+                   	else if ( (LA24_4 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 10; }
 
-                   	else if ( (LA24_4 == INCREMENT) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 11; }
+                   	else if ( (LA24_4 == INCREMENT) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 11; }
 
-                   	else if ( (LA24_4 == ECHO) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 12; }
+                   	else if ( (LA24_4 == ECHO) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 12; }
 
-                   	else if ( (LA24_4 == SAY) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 13; }
+                   	else if ( (LA24_4 == SAY) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 13; }
 
-                   	else if ( (LA24_4 == LINEBREAK) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 14; }
+                   	else if ( (LA24_4 == LINEBREAK) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 14; }
 
-                   	else if ( (LA24_4 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 1; }
+                   	else if ( (LA24_4 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 1; }
 
                    	 
                    	input.Seek(index24_4);
@@ -4111,9 +4111,9 @@ public partial class SourceExprParser : Parser
                    	int index24_24 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_24 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 34; }
+                   	if ( (LA24_24 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 34; }
 
-                   	else if ( (LA24_24 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 35; }
+                   	else if ( (LA24_24 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 35; }
 
                    	 
                    	input.Seek(index24_24);
@@ -4126,9 +4126,9 @@ public partial class SourceExprParser : Parser
                    	int index24_12 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_12 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 24; }
+                   	if ( (LA24_12 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 24; }
 
-                   	else if ( (LA24_12 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 25; }
+                   	else if ( (LA24_12 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 25; }
 
                    	 
                    	input.Seek(index24_12);
@@ -4141,9 +4141,9 @@ public partial class SourceExprParser : Parser
                    	int index24_40 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_40);
@@ -4156,9 +4156,9 @@ public partial class SourceExprParser : Parser
                    	int index24_27 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true))) ) { s = 5; }
+                   	if ( ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 5; }
 
-                   	else if ( (((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))) ) { s = 21; }
+                   	else if ( ((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)) ) { s = 21; }
 
                    	 
                    	input.Seek(index24_27);
@@ -4171,9 +4171,9 @@ public partial class SourceExprParser : Parser
                    	int index24_50 = input.Index();
                    	input.Rewind();
                    	s = -1;
-                   	if ( (LA24_50 == ID) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 45; }
+                   	if ( (LA24_50 == ID) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 45; }
 
-                   	else if ( (LA24_50 == 21) && ((((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == false))|| ((_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent == true)))) ) { s = 46; }
+                   	else if ( (LA24_50 == 21) && (((!_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent)|| (_script.SupportedMetaData[((guiRule_scope)guiRule_stack.Peek()).metaType].IsIndependent))) ) { s = 46; }
 
                    	 
                    	input.Seek(index24_50);
@@ -4280,17 +4280,17 @@ public partial class SourceExprParser : Parser
     public static readonly BitSet FOLLOW_21_in_firstGuiField725 = new BitSet(new ulong[]{0x0000000000010000UL});
     public static readonly BitSet FOLLOW_ID_in_firstGuiField729 = new BitSet(new ulong[]{0x0000000000200000UL});
     public static readonly BitSet FOLLOW_21_in_firstGuiField731 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_guiFields_in_metaEnding760 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_guiFields_in_metaEnding768 = new BitSet(new ulong[]{0x00000000000187F0UL});
-    public static readonly BitSet FOLLOW_LINEBREAK_in_metaEnding770 = new BitSet(new ulong[]{0x00000000000187F0UL});
-    public static readonly BitSet FOLLOW_stat_in_metaEnding773 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_guiField_in_guiFields798 = new BitSet(new ulong[]{0x0000000000200002UL});
-    public static readonly BitSet FOLLOW_21_in_guiField812 = new BitSet(new ulong[]{0x0000000000030000UL});
-    public static readonly BitSet FOLLOW_metaElement_in_guiField814 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_guiField816 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_INT_in_metaElement834 = new BitSet(new ulong[]{0x0000000000000002UL});
-    public static readonly BitSet FOLLOW_ID_in_metaElement851 = new BitSet(new ulong[]{0x0000000000010002UL});
-    public static readonly BitSet FOLLOW_21_in_emptyQuotes875 = new BitSet(new ulong[]{0x0000000000200000UL});
-    public static readonly BitSet FOLLOW_21_in_emptyQuotes876 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiFields_in_metaEnding765 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiFields_in_metaEnding775 = new BitSet(new ulong[]{0x00000000000187F0UL});
+    public static readonly BitSet FOLLOW_LINEBREAK_in_metaEnding777 = new BitSet(new ulong[]{0x00000000000187F0UL});
+    public static readonly BitSet FOLLOW_stat_in_metaEnding780 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_guiField_in_guiFields805 = new BitSet(new ulong[]{0x0000000000200002UL});
+    public static readonly BitSet FOLLOW_21_in_guiField819 = new BitSet(new ulong[]{0x0000000000030000UL});
+    public static readonly BitSet FOLLOW_metaElement_in_guiField821 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_guiField823 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_INT_in_metaElement841 = new BitSet(new ulong[]{0x0000000000000002UL});
+    public static readonly BitSet FOLLOW_ID_in_metaElement858 = new BitSet(new ulong[]{0x0000000000010002UL});
+    public static readonly BitSet FOLLOW_21_in_emptyQuotes882 = new BitSet(new ulong[]{0x0000000000200000UL});
+    public static readonly BitSet FOLLOW_21_in_emptyQuotes883 = new BitSet(new ulong[]{0x0000000000000002UL});
 
 }

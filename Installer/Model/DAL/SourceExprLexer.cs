@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g 2011-06-23 01:54:01
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g 2011-06-23 02:47:43
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -277,7 +277,7 @@ public partial class SourceExprLexer : Lexer {
     		{
             int _type = LINEBREAK;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:118:2: ( ';' | '\\r\\n' | '\\r' | '\\n' )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:119:2: ( ';' | '\\r\\n' | '\\r' | '\\n' )
             int alt1 = 4;
             switch ( input.LA(1) ) 
             {
@@ -314,14 +314,14 @@ public partial class SourceExprLexer : Lexer {
             switch (alt1) 
             {
                 case 1 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:118:4: ';'
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:119:4: ';'
                     {
                     	Match(';'); 
 
                     }
                     break;
                 case 2 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:119:4: '\\r\\n'
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:120:4: '\\r\\n'
                     {
                     	Match("\r\n"); 
 
@@ -329,14 +329,14 @@ public partial class SourceExprLexer : Lexer {
                     }
                     break;
                 case 3 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:120:4: '\\r'
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:121:4: '\\r'
                     {
                     	Match('\r'); 
 
                     }
                     break;
                 case 4 :
-                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:121:4: '\\n'
+                    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:122:4: '\\n'
                     {
                     	Match('\n'); 
 
@@ -360,11 +360,11 @@ public partial class SourceExprLexer : Lexer {
     		{
             int _type = INT;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:123:5: ( ( options {greedy=false; } : '0' .. '9' ) )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:123:7: ( options {greedy=false; } : '0' .. '9' )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:124:5: ( ( options {greedy=false; } : '0' .. '9' ) )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:124:7: ( options {greedy=false; } : '0' .. '9' )
             {
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:123:7: ( options {greedy=false; } : '0' .. '9' )
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:123:36: '0' .. '9'
+            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:124:7: ( options {greedy=false; } : '0' .. '9' )
+            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:124:36: '0' .. '9'
             	{
             		MatchRange('0','9'); 
 
@@ -389,10 +389,10 @@ public partial class SourceExprLexer : Lexer {
     		{
             int _type = ID;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:126:5: ( ( CHARACTER )+ )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:126:8: ( CHARACTER )+
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:127:5: ( ( CHARACTER )+ )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:127:8: ( CHARACTER )+
             {
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:126:8: ( CHARACTER )+
+            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:127:8: ( CHARACTER )+
             	int cnt2 = 0;
             	do 
             	{
@@ -408,7 +408,7 @@ public partial class SourceExprLexer : Lexer {
             	    switch (alt2) 
             		{
             			case 1 :
-            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:126:8: CHARACTER
+            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:127:8: CHARACTER
             			    {
             			    	mCHARACTER(); 
 
@@ -444,8 +444,8 @@ public partial class SourceExprLexer : Lexer {
     {
     		try
     		{
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:128:20: (~ ( '\"' | ';' | '\\r' | '\\n' | '\\r\\n' | ' ' | '\\t' | '\\u000C' ) )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:128:22: ~ ( '\"' | ';' | '\\r' | '\\n' | '\\r\\n' | ' ' | '\\t' | '\\u000C' )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:129:20: (~ ( '\"' | ';' | '\\r' | '\\n' | '\\r\\n' | ' ' | '\\t' | '\\u000C' ) )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:129:22: ~ ( '\"' | ';' | '\\r' | '\\n' | '\\r\\n' | ' ' | '\\t' | '\\u000C' )
             {
             	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\b') || input.LA(1) == '\u000B' || (input.LA(1) >= '\u000E' && input.LA(1) <= '\u001F') || input.LA(1) == '!' || (input.LA(1) >= '#' && input.LA(1) <= ':') || (input.LA(1) >= '<' && input.LA(1) <= '\uFFFF') ) 
             	{
@@ -475,10 +475,10 @@ public partial class SourceExprLexer : Lexer {
     		{
             int _type = WS;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:130:3: ( ( ' ' | '\\t' | '\\u000C' )+ )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:130:5: ( ' ' | '\\t' | '\\u000C' )+
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:131:3: ( ( ' ' | '\\t' | '\\u000C' )+ )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:131:5: ( ' ' | '\\t' | '\\u000C' )+
             {
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:130:5: ( ' ' | '\\t' | '\\u000C' )+
+            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:131:5: ( ' ' | '\\t' | '\\u000C' )+
             	int cnt3 = 0;
             	do 
             	{
@@ -543,8 +543,8 @@ public partial class SourceExprLexer : Lexer {
     		{
             int _type = SLINE_COMMENT;
     	int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:132:15: ( '//' ~ '#' (~ ( '\\r' | '\\n' ) )* )
-            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:132:17: '//' ~ '#' (~ ( '\\r' | '\\n' ) )*
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:133:15: ( '//' ~ '#' (~ ( '\\r' | '\\n' ) )* )
+            // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:133:17: '//' ~ '#' (~ ( '\\r' | '\\n' ) )*
             {
             	Match("//"); 
 
@@ -559,7 +559,7 @@ public partial class SourceExprLexer : Lexer {
             	    Recover(mse);
             	    throw mse;}
 
-            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:132:27: (~ ( '\\r' | '\\n' ) )*
+            	// D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:133:27: (~ ( '\\r' | '\\n' ) )*
             	do 
             	{
             	    int alt4 = 2;
@@ -574,7 +574,7 @@ public partial class SourceExprLexer : Lexer {
             	    switch (alt4) 
             		{
             			case 1 :
-            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:132:28: ~ ( '\\r' | '\\n' )
+            			    // D:\\Documents\\Visual Studio 2010\\Projects\\Installer\\Installer\\Model\\DAL\\SourceExpr.g:133:28: ~ ( '\\r' | '\\n' )
             			    {
             			    	if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t') || (input.LA(1) >= '\u000B' && input.LA(1) <= '\f') || (input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) 
             			    	{
